@@ -95,18 +95,19 @@
     </div>
     <div class="pagination pagination-centered" id="paging-buttons">
         
-                <ul>
+                
+                <ul class="pager">
                     <li>
-                        <button id="first">First</button>
+                        <a href="#" id="first">First</a>
                     </li>
                     <li>
-                        <button id="backward">Backward</button>
+                        <a href="#" id="backward">&larr; Backward</a>
                     </li>
                     <li>
-                        <button id="forward">Forward</button>
+                        <a href="#" id="forward">Forward &rarr;</a>
                     </li>
                     <li>
-                        <button id="last">Last</button>
+                        <a href="#" id="last">Last</a>
                     </li>
                 </ul>
             
