@@ -4,6 +4,6 @@
 <td><%= @user.get('role') %></td>
 <td><%= @user.get('email') %></td>
 <td><%= @user.get('region') %></td>
-<td><div id="edit">Edit</div></td>
-<td><div id="destroy">Destroy</div></td>
-<td><div id="duplicate">Duplicate</div></td>
+<td><div id="edit" class= "btn btn-primary">Edit</div></td>
+<td><div id="destroy" class="btn btn-danger">Destroy</div></td>
+<td><div id="duplicate" class="btn btn-warning">Duplicate</div></td>

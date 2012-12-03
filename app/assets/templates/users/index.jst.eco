@@ -1,64 +1,114 @@
-<h4>This page is appointed for creating new and managing existing users</h4>
-<button id="user_create_button">Create New User</button>
-<div>Number of Found Users: <%= @users.length %></a></div>
-<div  class="panel">
-<h4>Search by</h4>
-<label>Field Filter</label><br/>
-<form action="/users/filter" class="filters">
-<select name="field">
-  <option value="login_name">User Name</option>
-  <option value="all_columns">All Columns</option>
-  <option value="first_name">First Name</option>
-  <option value="last_name">Last Name</option>
-  <option value="role">Role</option>
-</select>
-<select name="method">
-  <option value="start_with">starts with</option>
-  <option value="equals">equals</option>
-  <option value="not_equal_to">not equal to</option>
-  <option value="contains">contains</option>
-  <option value="does_not_contain">does not contain</option>
-</select>
-<input type="text" />
-
-<input type="submit" id="search">
-</form>
-</div>	
-
-<div class="paging">
-<% if @pageInfo.perPage != 25: %>
-  <a class="setTwentyfive" href="#">Show 25 items</a>
-<% end %>
-<% if @pageInfo.perPage != 10: %>
-  <a class="setTen" href="#">Show 10 items</a>
-<% end %>
+<div class="container-fluid">
+    <header class="row-fluid">
+        <h4>
+            This page is appointed for creating new and managing existing users
+        </h4>
+    </header>
+    <section class="row-fluid">
+        <button id="user_create_button" class= "btn btn-primary">Create New User</button>
+    </section>
+    <div>
+        Number of Found Users: <%= @users.length %>
+    </div>
+    
+    <div class="panel">
+        <h4>
+            Search by
+        </h4><label>Field Filter</label><br>
+        <form action="/users/filter" class="filters form-inline">
+            <select name="field">
+                <option value="login_name">
+                    User Name
+                </option>
+                <option value="all_columns">
+                    All Columns
+                </option>
+                <option value="first_name">
+                    First Name
+                </option>
+                <option value="lastName">
+                    Last Name
+                </option>
+                <option value="role">
+                    Role
+                </option>
+            </select> 
+            <select name="method">
+                <option value="start_with">
+                    starts with
+                </option>
+                <option value="equals">
+                    equals
+                </option>
+                <option value="not_equal_to">
+                    not equal to
+                </option>
+                <option value="contains">
+                    contains
+                </option>
+                <option value="does_not_contain">
+                    does not contain
+                </option>
+            </select> 
+            <input type="text"> <input type="submit" id="search" class= "btn btn-primary">
+        </form>
+    </div>
+    <div class="paging">
+        <% if @pageInfo.perPage != 25: %><a class="setTwentyfive" href="#">Show 25 items</a> <% end %> <% if @pageInfo.perPage != 10: %> <a class="setTen" href="#">Show 10 items</a> <% end %>
+    </div>
+    <table id="users" class="table table-condensed">
+        <tbody>
+            <tr>
+                <th>
+                    User name
+                </th>
+                <th>
+                    First name
+                </th>
+                <th>
+                    Last name
+                </th>
+                <th>
+                    Role
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Region
+                </th>
+                <th>
+                    Edit
+                </th>
+                <th>
+                    Remove
+                </th>
+                <th>
+                    Duplicate
+                </th>
+            </tr>
+        </tbody>
+    </table>
+    
+    <div id="paging-title">
+            Page #: <%= @pageInfo.currentPage %> from <%= @pageInfo.numPages %>
+    </div>
+    <div class="pagination pagination-centered" id="paging-buttons">
+        
+                <ul>
+                    <li>
+                        <button id="first">First</button>
+                    </li>
+                    <li>
+                        <button id="backward">Backward</button>
+                    </li>
+                    <li>
+                        <button id="forward">Forward</button>
+                    </li>
+                    <li>
+                        <button id="last">Last</button>
+                    </li>
+                </ul>
+            
+         </div>
 </div>
-
-<table id="users">
-<tbody>
-<tr>
-	<th>User name</th>
-	<th>First name</th>
-	<th>Last name</th>
-	<th>Role</th>
-	<th>Email</th>
-	<th>Region</th>
-	<th>Edit</th>
-	<th>Remove</th>
-	<th>Duplicate</th> 
-</tr>
-</tbody>
-</table>
-
-<div id="paging-title">Page #: <%= @pageInfo.currentPage %> from <%= @pageInfo.numPages %></div>
-
-<div id="paging-buttons">
-<% if @pageInfo.currentPage != 1: %>
-  <button id="first">First</button>
-  <button id="backward">Backward</button>
-<% end %>
-<% if @pageInfo.currentPage != @pageInfo.numPages: %>
-  <button id="forward">Forward</button>
-  <button id="last">Last</button>
-<% end %>
-</div>  
