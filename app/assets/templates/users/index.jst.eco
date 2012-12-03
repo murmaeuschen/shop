@@ -94,21 +94,28 @@
             Page #: <%= @pageInfo.currentPage %> from <%= @pageInfo.numPages %>
     </div>
     <div class="pagination pagination-centered" id="paging-buttons">
+
         
-                
-                <ul class="pager">
+            
+    <ul class="pager">
+
+        <% if @pageInfo.currentPage != 1: %>
+
                     <li>
                         <a href="#" id="first">First</a>
                     </li>
                     <li>
                         <a href="#" id="backward">&larr; Backward</a>
                     </li>
+        <% end %>
+        <% if @pageInfo.currentPage != @pageInfo.numPages: %>
                     <li>
                         <a href="#" id="forward">Forward &rarr;</a>
                     </li>
                     <li>
                         <a href="#" id="last">Last</a>
                     </li>
+        <% end %>
                 </ul>
             
          </div>
