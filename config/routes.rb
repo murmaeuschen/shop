@@ -3,6 +3,7 @@ Shop::Application.routes.draw do
   scope "api" do
     resources :users
   end
+  match "users/filter" => "users#filter"
   
   root to: "users#index"
 

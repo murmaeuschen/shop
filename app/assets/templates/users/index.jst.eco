@@ -4,24 +4,25 @@
 <div  class="panel">
 <h4>Search by</h4>
 <label>Field Filter</label><br/>
-<select>
-  <option>User Name</option>
-  <option>All Columns</option>
-  <option>First Name</option>
-  <option>Last Name</option>
-  <option>Role</option>
+<form action="/users/filter" class="filters">
+<select name="field">
+  <option value="login_name">User Name</option>
+  <option value="all_columns">All Columns</option>
+  <option value="first_name">First Name</option>
+  <option value="lastName">Last Name</option>
+  <option value="role">Role</option>
 </select>
-<select>
-  <option>starts with</option>
-  <option>equals</option>
-  <option>not equal to</option>
-  <option>contains</option>
-  <option>does not contain</option>
+<select name="method">
+  <option value="start_with">starts with</option>
+  <option value="equals">equals</option>
+  <option value="not_equal_to">not equal to</option>
+  <option value="contains">contains</option>
+  <option value="does_not_contain">does not contain</option>
 </select>
-<input type="text" /><br/>
+<input type="text" />
 
-<button id="search">Search</button>
-
+<input type="submit" id="search">
+</form>
 </div>	
 
 <div class="paging">

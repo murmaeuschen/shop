@@ -45,4 +45,24 @@ class UsersController < ApplicationController
   def destroy
     respond_with User.destroy(params[:id])
   end
+
+  def filter
+    unless params[:field] == "all_columns"
+      fields = params[:field] 
+    else
+      fields = %w(login_name first_name lastName role)
+    end
+    users = case params[:method]
+             when "start_with" then User.start_with(fields, params[:query])
+             when "equals" then User.equals(fields, params[:query])
+             when "not_equal_to" then User.not_equal_to(fields, params[:query])
+             when "contains" then User.contains(fields, params[:query])
+             else User.does_not_contain(fields, params[:query]) 
+             end
+
+    respond_with users
+
+  end
+
+
 end
