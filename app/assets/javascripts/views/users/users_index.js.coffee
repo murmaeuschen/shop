@@ -14,7 +14,7 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.on('add', @render, @)
     @collection.on('destroy', @render, @)
     @collection.on('change', @render, @)
-    console.log @collection.pageInfo().currentPage
+    
             
   render: ->
     $(@el).html(@template(users: @collection, pageInfo: @collection.pageInfo() ))
@@ -34,6 +34,8 @@ class Shop.Views.UsersIndex extends Backbone.View
  
   next: =>
     @collection.nextPage()
+    console.log @collection.pageInfo().currentPage
+    console.log @collection.nextPage()
     return false
 
   last: =>

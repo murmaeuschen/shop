@@ -32,7 +32,7 @@ class Shop.Collections.Users extends Backbone.Collection
     #@pageInfo.perPage = perPage
     
   nextPage: =>
-    return false if !@pageInfo().next
+    #return false if !@pageInfo().next
     @currentPage = @currentPage + 1
     console.log @currentPage
     return @fetch()
@@ -46,8 +46,8 @@ class Shop.Collections.Users extends Backbone.Collection
     @currentPage = page
     return @fetch()
 
-  url: ->
-    @baseUrl + '?' + $.param({page: @currentPage, perPage: @perPage})
+  url: =>
+    @baseUrl + '?' + $.param({currentPage: @currentPage, perPage: @perPage})
 
   duplicateUser: (userId) ->
     curAttr = @get(userId).attributes
