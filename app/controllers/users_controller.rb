@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.page params[:page]
-    @page_info = {
+    @pagination = {
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
       per_page:     @users.limit_value,

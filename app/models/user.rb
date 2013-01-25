@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   
   attr_accessible :login_name, :first_name, :lastName, :password, :confirmPassword, :email, :region, :role
   default_scope -> { order("id asc") }
-  #paginates_per 3
+  paginates_per 3
   
   scope :start_with, lambda { |fields, query| where(
       if fields.kind_of? Array 

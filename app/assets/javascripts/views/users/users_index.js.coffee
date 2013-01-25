@@ -4,16 +4,17 @@ class Shop.Views.UsersIndex extends Backbone.View
 
   events:
     'click #user_create_button': 'createUser'
-    "click a.jlink": "navigateThroughLink"
-    "click #paging-buttons button": "navigateThroughLink"
-    "click .paging a" : "changeShownNum"
+    'click #backward': 'previous'
+    'click #forward': 'previous'
+    'click #first': 'previous'
+    'click #last': 'previous'
 
   initialize: ->
     @collection.on('reset', @render, @)
     @collection.on('add', @render, @)
     @collection.on('destroy', @render, @)
     @collection.on('change', @render, @)
-    
+    console.log @collection.pageInfo
             
   render: ->
     $(@el).html(@template(users: @collection))
@@ -27,10 +28,23 @@ class Shop.Views.UsersIndex extends Backbone.View
   createUser: ->
     Backbone.history.navigate("/new", true)
 
-  navigateThroughLink: (event)->
-    event.preventDefault()
-    Backbone.history.navigate(event.target.attributes["name"].value, true)
-    false
+  previous: =>
+    @collection.previousPage()
+    return false
+ 
+  next: =>
+    @collection.nextPage()
+    return false
+
+  last: =>
+    @collection.gotoPage(@collection.pageInfo.numPages)
+    return false
+
+  first: =>
+    @collection.gotoPage(1)
+    return false
+
+
 
   changeShownNum: ->
     console.log @collection.pageInfo.perPage

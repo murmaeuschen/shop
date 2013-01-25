@@ -53,11 +53,11 @@
 
 <div id="paging-buttons">
 <% if @users.pageInfo.currentPage != 1: %>
-  <button name="/users?page=1">First</button>
-  <button name="/users?page=<%= @users.pageInfo.currentPage-1 %>">Backward</button>
+  <button id="first">First</button>
+  <button id="backward">Backward</button>
 <% end %>
 <% if @users.pageInfo.currentPage != @users.pageInfo.numPages: %>
-  <button name="/users?page=<%= @users.pageInfo.currentPage+1 %>">Forward</button>
-  <button name="/users?page=<%= @users.pageInfo.numPages %>">Last</button>
+  <button id="forward">Forward</button>
+  <button id="last">Last</button>
 <% end %>
 </div>  

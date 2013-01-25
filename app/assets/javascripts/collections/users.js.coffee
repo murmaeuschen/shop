@@ -2,36 +2,51 @@ class Shop.Collections.Users extends Backbone.Collection
 
   baseUrl: '/api/users'
   model: Shop.Models.User
-  currentPage: 1
-  perPage: 10
-  pageInfo: {}
-  pageParam: "page"
+  #currentPage: 1
+  #perPage: 10
+  initialize: (options) =>
+    @init_pagination(options)
 
-  parse: (resp, xhr) ->
-    @setPageInfo(resp)
+  pageInfo: =>
+    info =
+      numPages: @numPages
+      currentPage: @currentPage
+      perPage: @perPage
+      numPages: @numPages
+      prev: false
+      next: false
+      pageParam: "page"
+  #pageParam: "page"
+
+  parse: (resp) =>
+    @init_pagination(resp)
     resp["models"]
 
-  setPageInfo: (info) ->
-    _.extend(@pageInfo, {
-      currentPage:  Number(info["current_page"] or info["currentPage"]),
-      numPages:     Number(info["num_pages"]    or info["numPages"]),
-      perPage:      @perPage
-    })
-    @currentPage = @pageInfo['currentPage']
-
-  howManyPer: (perPage) ->
-    @pageInfo.currentPage = 1
-    @pageInfo.perPage = perPage
+  init_pagination: (options) =>
+    @currentPage = options['current_page']
+    @perPage = options['per_page']
+    @numPages = options['num_pages']
     
+  #howManyPer: (perPage) ->
+    #@pageInfo.currentPage = 1
+    #@pageInfo.perPage = perPage
     
+  nextPage: =>
+    return false if !@pageInfo().next
+    @currentPage = @currentPage + 1
+    return @fetch()
+ 
+  previousPage: =>
+    return false if !@pageInfo().prev
+    @currentPage = @currentPage - 1
+    return @fetch()
 
-  setPage: (page) ->
-    return unless page > 0
-    [oldPage, @currentPage] = [@currentPage, Number(page)]
-    @fetch() unless oldPage == @currentPage
+  gotoPage: (page) =>
+    @currentPage = page
+    return @fetch()
 
   url: ->
-    @baseUrl + '?' + $.param({page: @currentPage})
+    @baseUrl + '?' + $.param({currentPage: @currentPage, perPage: @perPage})
 
   duplicateUser: (userId) ->
     curAttr = @get(userId).attributes
