@@ -26,7 +26,7 @@
 </div>	
 
 <div class="paging">
-<% if @users.pageInfo.perPage = 10: %>
+<% if @pageInfo.perPage = 10: %>
   <a href="#">Show 25 items</a>
 <% else: %>
   <a href="#">Show 10 items</a>
@@ -49,14 +49,14 @@
 </tbody>
 </table>
 
-<div id="paging-title">Page #: <%= @users.pageInfo.currentPage %> from <%= @users.pageInfo.numPages %></div>
+<div id="paging-title">Page #: <%= @pageInfo.currentPage %> from <%= @pageInfo.numPages %></div>
 
 <div id="paging-buttons">
-<% if @users.pageInfo.currentPage != 1: %>
+<% if @pageInfo.currentPage != 1: %>
   <button id="first">First</button>
   <button id="backward">Backward</button>
 <% end %>
-<% if @users.pageInfo.currentPage != @users.pageInfo.numPages: %>
+<% if @pageInfo.currentPage != @pageInfo.numPages: %>
   <button id="forward">Forward</button>
   <button id="last">Last</button>
 <% end %>

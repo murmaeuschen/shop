@@ -5,19 +5,19 @@ class Shop.Views.UsersIndex extends Backbone.View
   events:
     'click #user_create_button': 'createUser'
     'click #backward': 'previous'
-    'click #forward': 'previous'
-    'click #first': 'previous'
-    'click #last': 'previous'
+    'click #forward': 'next'
+    'click #first': 'first'
+    'click #last': 'last'
 
   initialize: ->
     @collection.on('reset', @render, @)
     @collection.on('add', @render, @)
     @collection.on('destroy', @render, @)
     @collection.on('change', @render, @)
-    console.log @collection.pageInfo
+    console.log @collection.pageInfo().currentPage
             
   render: ->
-    $(@el).html(@template(users: @collection))
+    $(@el).html(@template(users: @collection, pageInfo: @collection.pageInfo() ))
     @collection.each(@appendUser)
     @
 

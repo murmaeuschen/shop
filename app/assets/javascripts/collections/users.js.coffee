@@ -34,6 +34,7 @@ class Shop.Collections.Users extends Backbone.Collection
   nextPage: =>
     return false if !@pageInfo().next
     @currentPage = @currentPage + 1
+    console.log @currentPage
     return @fetch()
  
   previousPage: =>
@@ -46,7 +47,7 @@ class Shop.Collections.Users extends Backbone.Collection
     return @fetch()
 
   url: ->
-    @baseUrl + '?' + $.param({currentPage: @currentPage, perPage: @perPage})
+    @baseUrl + '?' + $.param({page: @currentPage, perPage: @perPage})
 
   duplicateUser: (userId) ->
     curAttr = @get(userId).attributes
@@ -54,3 +55,5 @@ class Shop.Collections.Users extends Backbone.Collection
     dupl_user.id = undefined
     dupl_user.attributes["id"] = undefined
     dupl_user  
+
+ 
