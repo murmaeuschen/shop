@@ -4,10 +4,11 @@ class Shop.Views.UsersIndex extends Backbone.View
 
   events:
     'click #user_create_button': 'createUser'
-    'click #backward': 'previous'
-    'click #forward': 'next'
-    'click #first': 'first'
-    'click #last': 'last'
+    'click #backward'          : 'previous'
+    'click #forward'           : 'next'
+    'click #first'             : 'first'
+    'click #last'              : 'last'
+    'click .setTwentyfive'     : 'changeShownNum'
 
   initialize: ->
     @collection.on('reset', @render, @)
@@ -34,23 +35,18 @@ class Shop.Views.UsersIndex extends Backbone.View
  
   next: =>
     @collection.nextPage()
-    console.log @collection.pageInfo().currentPage
-    console.log @collection.nextPage()
     return false
 
   last: =>
-    @collection.gotoPage(@collection.pageInfo.numPages)
+    @collection.gotoPage(@collection.pageInfo().numPages)
     return false
 
   first: =>
     @collection.gotoPage(1)
     return false
 
-
-
-  changeShownNum: ->
-    console.log @collection.pageInfo.perPage
-    @collection.howManyPer(25) if @collection.pageInfo.perPage = 10
-    @collection.howManyPer(10) if @collection.pageInfo.perPage = 25
-    @render
-    console.log @collection.pageInfo.perPage
+  changeShownNum: =>
+    switch @collection.pageInfo().perPage
+      when 10 then @collection.howManyPer(25)
+      when 25 then @collection.howManyPer(10)
+  @render

@@ -26,10 +26,11 @@
 </div>	
 
 <div class="paging">
-<% if @pageInfo.perPage = 10: %>
-  <a href="#">Show 25 items</a>
-<% else: %>
-  <a href="#">Show 10 items</a>
+<% if @pageInfo.perPage != 25: %>
+  <a class="setTwentyfive" href="#">Show 25 items</a>
+<% end %>
+<% if @pageInfo.perPage != 10: %>
+  <a class="setTen" href="#">Show 10 items</a>
 <% end %>
 </div>
 

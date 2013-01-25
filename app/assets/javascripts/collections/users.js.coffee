@@ -27,18 +27,16 @@ class Shop.Collections.Users extends Backbone.Collection
     @perPage = options['per_page']
     @numPages = options['num_pages']
     
-  #howManyPer: (perPage) ->
-    #@pageInfo.currentPage = 1
-    #@pageInfo.perPage = perPage
+  howManyPer: (newPerPage) =>
+    @currentPage = 1
+    @perPage = newPerPage
+    return @fetch()
     
   nextPage: =>
-    #return false if !@pageInfo().next
     @currentPage = @currentPage + 1
-    console.log @currentPage
     return @fetch()
  
   previousPage: =>
-    return false if !@pageInfo().prev
     @currentPage = @currentPage - 1
     return @fetch()
 

@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   respond_to :html, :json
 
   def index
-    @users = User.page params[:page]
+    @users = User.page(params[:currentPage], params[:perPage], params[:numPages])
     @pagination = {
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html
       format.json do
-        respond_with({ models: @users }.merge @page_info)
+        respond_with({ models: @users }.merge @pagination)
       end
     end
   end
@@ -63,6 +63,4 @@ class UsersController < ApplicationController
     respond_with users
 
   end
-
-
 end
