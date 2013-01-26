@@ -8,7 +8,8 @@ class Shop.Views.UsersIndex extends Backbone.View
     'click #forward'           : 'next'
     'click #first'             : 'first'
     'click #last'              : 'last'
-    'click .setTwentyfive'     : 'changeShownNum'
+    'click .paging a'          : 'changeShownNum'
+    #'click .setTen'            : 'changeToTen'
 
   initialize: ->
     @collection.on('reset', @render, @)
@@ -45,9 +46,9 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.gotoPage(1)
     return false
 
-  changeShownNum: =>
-    @collection.howManyPer(25)
-    #switch @collection.pageInfo().perPage
-      #when 10 then @collection.howManyPer(25)
-      #when 25 then @collection.howManyPer(10)
+  changeShownNum: (e) ->
+    e.preventDefault()
+    per = $(e.target).text().substring(5,7)
+    @collection.howManyPer(per)
     @render
+ 

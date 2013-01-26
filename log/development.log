@@ -16728,3 +16728,651 @@ Processing by UsersController#destroy as JSON
   [1m[36mSQL (14.0ms)[0m  [1mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
   [1m[35m (26.2ms)[0m  commit transaction
 Completed 204 No Content in 144ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:47:03 +0200
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (71.6ms)
+Compiled views/users/users_index.js  (555ms)  (pid 4058)
+Compiled routers/users_router.js  (197ms)  (pid 4058)
+Compiled application.js  (96ms)  (pid 4058)
+Completed 200 OK in 2395ms (Views: 2098.9ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:47:21 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (11.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (21.1ms)
+Compiled views/users/users_index.js  (273ms)  (pid 4058)
+Compiled application.js  (115ms)  (pid 4058)
+Completed 200 OK in 1341ms (Views: 1070.4ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:48:49 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (161.6ms)
+Compiled views/users/users_index.js  (266ms)  (pid 4058)
+Compiled application.js  (216ms)  (pid 4058)
+Completed 200 OK in 1726ms (Views: 1694.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:49:14 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (17.1ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (115.1ms)
+Compiled views/users/users_index.js  (50ms)  (pid 4058)
+Compiled application.js  (147ms)  (pid 4058)
+Completed 200 OK in 1406ms (Views: 1360.0ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:49:34 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (16.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (121.5ms)
+Compiled views/users/users_index.js  (60ms)  (pid 4058)
+Compiled application.js  (100ms)  (pid 4058)
+Completed 200 OK in 2130ms (Views: 2085.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 13:55:09 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (125.2ms)
+Compiled users/index.js  (507ms)  (pid 4058)
+Compiled collections/users.js  (62ms)  (pid 4058)
+Compiled views/users/users_index.js  (38ms)  (pid 4058)
+Compiled application.js  (115ms)  (pid 4058)
+Completed 200 OK in 2062ms (Views: 2004.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/api/users?currentPage=2&perPage=10" for 127.0.0.1 at 2013-01-26 13:55:22 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"2", "perPage"=>"10"}
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 10
+Completed 200 OK in 189ms (Views: 16.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 13:55:28 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+Completed 200 OK in 70ms (Views: 37.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:01:10 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (10.6ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (68.4ms)
+Compiled users/index.js  (168ms)  (pid 4058)
+Compiled application.js  (140ms)  (pid 4058)
+Completed 200 OK in 1709ms (Views: 1668.0ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/api/users?currentPage=2&perPage=10" for 127.0.0.1 at 2013-01-26 14:01:21 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"2", "perPage"=>"10"}
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 10
+Completed 200 OK in 70ms (Views: 22.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:01:24 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.4ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+Completed 200 OK in 60ms (Views: 34.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:06:15 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (26.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (10.3ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (145.3ms)
+Compiled views/users/users_index.js  (286ms)  (pid 4058)
+Compiled application.js  (304ms)  (pid 4058)
+Completed 200 OK in 2678ms (Views: 2577.0ms | ActiveRecord: 36.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:07:14 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (16.3ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (177.6ms)
+Compiled views/users/users_index.js  (404ms)  (pid 4058)
+Compiled application.js  (514ms)  (pid 4058)
+Completed 200 OK in 4569ms (Views: 4425.8ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:07:54 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (10.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (35.4ms)
+Compiled views/users/users_index.js  (79ms)  (pid 4058)
+Compiled application.js  (99ms)  (pid 4058)
+Completed 200 OK in 1428ms (Views: 1391.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:10:20 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 25 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (123.2ms)
+Completed 200 OK in 421ms (Views: 402.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:11:00 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 25 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (298.1ms)
+Completed 200 OK in 571ms (Views: 514.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:12:49 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (4.0ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 25 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (226.8ms)
+Completed 200 OK in 568ms (Views: 478.0ms | ActiveRecord: 14.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:13:46 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  [1m[36mEXPLAIN (0.3ms)[0m  [1mEXPLAIN QUERY PLAN SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+EXPLAIN for: SELECT  "users".* FROM "users"  ORDER BY id asc LIMIT 10 OFFSET 0
+0|0|TABLE users USING PRIMARY KEY ORDER BY
+
+  Rendered users/index.html.erb within layouts/application (583.7ms)
+Completed 200 OK in 993ms (Views: 927.6ms | ActiveRecord: 20.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:14:44 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (17.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (9.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (97.9ms)
+Compiled collections/users.js  (212ms)  (pid 4058)
+Compiled application.js  (283ms)  (pid 4058)
+Completed 200 OK in 2025ms (Views: 1979.2ms | ActiveRecord: 26.6ms)
+
+
+Started GET "/api/users?currentPage=2&perPage=25" for 127.0.0.1 at 2013-01-26 14:14:59 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"2", "perPage"=>"25"}
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 10[0m
+Completed 200 OK in 58ms (Views: 34.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:15:03 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 67ms (Views: 34.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:15:16 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (7.7ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (190.6ms)
+Completed 200 OK in 1093ms (Views: 939.2ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:17:01 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (14.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (122.8ms)
+Compiled collections/users.js  (309ms)  (pid 4058)
+Compiled application.js  (127ms)  (pid 4058)
+Completed 200 OK in 2539ms (Views: 2492.2ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:17:50 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (8.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (122.8ms)
+Compiled collections/users.js  (234ms)  (pid 4058)
+Compiled application.js  (150ms)  (pid 4058)
+Completed 200 OK in 1977ms (Views: 1930.2ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:19:46 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (105.5ms)
+Compiled collections/users.js  (98ms)  (pid 4058)
+Compiled application.js  (102ms)  (pid 4058)
+Completed 200 OK in 1756ms (Views: 1712.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:19:59 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (12.3ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (3.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (107.9ms)
+Compiled collections/users.js  (72ms)  (pid 4058)
+Compiled application.js  (222ms)  (pid 4058)
+Completed 200 OK in 2246ms (Views: 2191.5ms | ActiveRecord: 16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:20:40 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (9.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (133.1ms)
+Compiled collections/users.js  (116ms)  (pid 4058)
+Compiled application.js  (195ms)  (pid 4058)
+Completed 200 OK in 2241ms (Views: 2190.7ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/api/users?currentPage=2&perPage=25" for 127.0.0.1 at 2013-01-26 14:20:52 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"2", "perPage"=>"25"}
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 10[0m
+Completed 200 OK in 60ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:21:11 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (104.9ms)
+Compiled collections/users.js  (111ms)  (pid 4058)
+Compiled application.js  (96ms)  (pid 4058)
+Completed 200 OK in 1921ms (Views: 1864.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:21:29 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (28.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (7.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (99.8ms)
+Compiled collections/users.js  (17ms)  (pid 4058)
+Compiled application.js  (128ms)  (pid 4058)
+Completed 200 OK in 1103ms (Views: 1058.4ms | ActiveRecord: 36.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:21:43 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (75.2ms)
+Compiled collections/users.js  (35ms)  (pid 4058)
+Compiled application.js  (78ms)  (pid 4058)
+Completed 200 OK in 1117ms (Views: 1079.0ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:24:20 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (91.8ms)
+Compiled collections/users.js  (106ms)  (pid 4058)
+Compiled application.js  (114ms)  (pid 4058)
+Completed 200 OK in 1300ms (Views: 1269.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:24:29 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 116ms (Views: 30.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:24:46 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (86.1ms)
+Compiled collections/users.js  (33ms)  (pid 4058)
+Compiled application.js  (105ms)  (pid 4058)
+Completed 200 OK in 1651ms (Views: 1591.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:24:55 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 83ms (Views: 52.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:24:58 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 184ms (Views: 70.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:25:00 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (9.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (11.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 277ms (Views: 118.5ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:25:01 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (6.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 114ms (Views: 52.4ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:25:02 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (8.2ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (5.8ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 178ms (Views: 107.0ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:25:13 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (11.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (136.7ms)
+Completed 200 OK in 698ms (Views: 653.0ms | ActiveRecord: 13.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:25:49 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (8.3ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (110.1ms)
+Compiled collections/users.js  (89ms)  (pid 4058)
+Compiled application.js  (159ms)  (pid 4058)
+Completed 200 OK in 2694ms (Views: 2657.2ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:25:57 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (11.1ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 157ms (Views: 38.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-26 14:25:59 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[35m (6.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.5ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 129ms (Views: 45.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:26:15 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (95.6ms)
+Compiled collections/users.js  (141ms)  (pid 4058)
+Compiled application.js  (101ms)  (pid 4058)
+Completed 200 OK in 2093ms (Views: 2023.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=25" for 127.0.0.1 at 2013-01-26 14:26:23 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"25"}
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.6ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 82ms (Views: 46.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:27:01 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (247.1ms)
+Compiled collections/users.js  (131ms)  (pid 4058)
+Compiled application.js  (201ms)  (pid 4058)
+Completed 200 OK in 2420ms (Views: 2341.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=25" for 127.0.0.1 at 2013-01-26 14:27:09 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"25"}
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 82ms (Views: 26.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:29:43 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 500 Internal Server Error in 270ms
+
+NoMethodError - undefined method `total_entries' for #<ActiveRecord::Relation:0xc23c3d0>:
+  (gem) activerecord-3.2.11/lib/active_record/relation/delegation.rb:45:in `method_missing'
+  app/controllers/users_controller.rb:10:in `index'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__687771148__process_action__1055066935__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.4/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__91586631__call__513826775__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.4/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.0/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.0/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.0/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.0/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.0/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.0/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.4/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.4/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/102198250/variables" for 127.0.0.1 at 2013-01-26 14:29:46 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:30:12 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (11.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 500 Internal Server Error in 202ms
+
+NoMethodError - undefined method `page_entries_info' for #<ActiveRecord::Relation:0xb8184e4>:
+  (gem) activerecord-3.2.11/lib/active_record/relation/delegation.rb:45:in `method_missing'
+  app/controllers/users_controller.rb:10:in `index'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:167:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rendering.rb:10:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:414:in `_run__687771148__process_action__1055066935__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_process_action_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/abstract_controller/callbacks.rb:17:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rescue.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `block in instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  (gem) activesupport-3.2.11/lib/active_support/notifications.rb:123:in `instrument'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/params_wrapper.rb:207:in `process_action'
+  (gem) activerecord-3.2.11/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  (gem) actionpack-3.2.11/lib/abstract_controller/base.rb:121:in `process'
+  (gem) actionpack-3.2.11/lib/abstract_controller/rendering.rb:45:in `process'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:203:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_controller/metal.rb:246:in `block in action'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:73:in `dispatch'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:36:in `call'
+  (gem) journey-1.0.4/lib/journey/router.rb:68:in `block in call'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `each'
+  (gem) journey-1.0.4/lib/journey/router.rb:56:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/routing/route_set.rb:601:in `call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:51:in `app_call'
+  (gem) better_errors-0.3.2/lib/better_errors/middleware.rb:45:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  (gem) rack-1.4.4/lib/rack/etag.rb:23:in `call'
+  (gem) rack-1.4.4/lib/rack/conditionalget.rb:25:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/head.rb:14:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/flash.rb:242:in `call'
+  (gem) rack-1.4.4/lib/rack/session/abstract/id.rb:210:in `context'
+  (gem) rack-1.4.4/lib/rack/session/abstract/id.rb:205:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/cookies.rb:341:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/query_cache.rb:64:in `call'
+  (gem) activerecord-3.2.11/lib/active_record/connection_adapters/abstract/connection_pool.rb:479:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `_run__91586631__call__513826775__callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:405:in `__run_callback'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  (gem) activesupport-3.2.11/lib/active_support/callbacks.rb:81:in `run_callbacks'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:32:in `call_app'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `block in call'
+  (gem) activesupport-3.2.11/lib/active_support/tagged_logging.rb:22:in `tagged'
+  (gem) railties-3.2.11/lib/rails/rack/logger.rb:16:in `call'
+  (gem) quiet_assets-1.0.1/lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  (gem) rack-1.4.4/lib/rack/methodoverride.rb:21:in `call'
+  (gem) rack-1.4.4/lib/rack/runtime.rb:17:in `call'
+  (gem) activesupport-3.2.11/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  (gem) rack-1.4.4/lib/rack/lock.rb:15:in `call'
+  (gem) actionpack-3.2.11/lib/action_dispatch/middleware/static.rb:62:in `call'
+  (gem) railties-3.2.11/lib/rails/engine.rb:479:in `call'
+  (gem) railties-3.2.11/lib/rails/application.rb:223:in `call'
+  (gem) rack-1.4.4/lib/rack/content_length.rb:14:in `call'
+  (gem) railties-3.2.11/lib/rails/rack/log_tailer.rb:17:in `call'
+  (gem) thin-1.5.0/lib/thin/connection.rb:81:in `block in pre_process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:79:in `catch'
+  (gem) thin-1.5.0/lib/thin/connection.rb:79:in `pre_process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:54:in `process'
+  (gem) thin-1.5.0/lib/thin/connection.rb:39:in `receive_data'
+  (gem) eventmachine-1.0.0/lib/eventmachine.rb:187:in `run_machine'
+  (gem) eventmachine-1.0.0/lib/eventmachine.rb:187:in `run'
+  (gem) thin-1.5.0/lib/thin/backends/base.rb:63:in `start'
+  (gem) thin-1.5.0/lib/thin/server.rb:159:in `start'
+  (gem) rack-1.4.4/lib/rack/handler/thin.rb:13:in `run'
+  (gem) rack-1.4.4/lib/rack/server.rb:268:in `start'
+  (gem) railties-3.2.11/lib/rails/commands/server.rb:70:in `start'
+  (gem) railties-3.2.11/lib/rails/commands.rb:55:in `block in <top (required)>'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `tap'
+  (gem) railties-3.2.11/lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+
+Started POST "/__better_errors/92080050/variables" for 127.0.0.1 at 2013-01-26 14:30:14 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-26 14:35:05 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.1ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (152.6ms)
+Compiled collections/users.js  (36ms)  (pid 4058)
+Compiled application.js  (102ms)  (pid 4058)
+Completed 200 OK in 1199ms (Views: 1174.7ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=25" for 127.0.0.1 at 2013-01-26 14:39:59 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"25"}
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 66ms (Views: 35.3ms | ActiveRecord: 1.3ms)

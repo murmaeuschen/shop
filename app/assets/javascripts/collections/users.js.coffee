@@ -2,8 +2,7 @@ class Shop.Collections.Users extends Backbone.Collection
 
   baseUrl: '/api/users'
   model: Shop.Models.User
-  #currentPage: 1
-  #perPage: 10
+
   initialize: (options) =>
     @init_pagination(options)
 
@@ -16,8 +15,7 @@ class Shop.Collections.Users extends Backbone.Collection
       prev: false
       next: false
       pageParam: "page"
-  #pageParam: "page"
-
+  
   parse: (resp) =>
     @init_pagination(resp)
     resp["models"]
@@ -30,8 +28,8 @@ class Shop.Collections.Users extends Backbone.Collection
   howManyPer: (newPerPage) =>
     @currentPage = 1
     @perPage = newPerPage
-    return @fetch()
-    
+    @fetch()
+        
   nextPage: =>
     @currentPage = @currentPage + 1
     return @fetch()
@@ -52,6 +50,4 @@ class Shop.Collections.Users extends Backbone.Collection
     dupl_user = new Shop.Models.User(curAttr)
     dupl_user.id = undefined
     dupl_user.attributes["id"] = undefined
-    dupl_user  
-
- 
+    dupl_user   
