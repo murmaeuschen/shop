@@ -46,7 +46,8 @@ class Shop.Views.UsersIndex extends Backbone.View
     return false
 
   changeShownNum: =>
-    switch @collection.pageInfo().perPage
-      when 10 then @collection.howManyPer(25)
-      when 25 then @collection.howManyPer(10)
-  @render
+    @collection.howManyPer(25)
+    #switch @collection.pageInfo().perPage
+      #when 10 then @collection.howManyPer(25)
+      #when 25 then @collection.howManyPer(10)
+    @render
