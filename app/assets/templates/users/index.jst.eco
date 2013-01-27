@@ -9,7 +9,7 @@
   <option value="login_name">User Name</option>
   <option value="all_columns">All Columns</option>
   <option value="first_name">First Name</option>
-  <option value="lastName">Last Name</option>
+  <option value="last_name">Last Name</option>
   <option value="role">Role</option>
 </select>
 <select name="method">

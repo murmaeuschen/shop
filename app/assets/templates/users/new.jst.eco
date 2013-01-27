@@ -16,7 +16,7 @@
 
 <div>
 <label for="last_name">Last Name</label>
-<input type="text" name="lastName" id="new_lastName"/>
+<input type="text" name="last_name" id="new_lastName"/>
 </div>
 
 <div>
@@ -26,7 +26,7 @@
 
 <div>
 <label for="confirm_password">Confirm Password</label>
-<input type="password" name="confirmPassword" id="new_confirmPassword"/>
+<input type="password" name="confirmation_password" id="new_confirmPassword"/>
 </div>
 
 <div>

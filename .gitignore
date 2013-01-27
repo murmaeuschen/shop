@@ -1,5 +1,6 @@
  config/databases.yml
 cache/*
+tmp/cache/*
 log/*
 data/sql/*
 lib/filter/base/*

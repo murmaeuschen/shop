@@ -1,6 +1,6 @@
 <td><%= @user.get('login_name') %></td> 
 <td><%= @user.get('first_name') %></td>
-<td><%= @user.get('lastName') %></td> 
+<td><%= @user.get('last_name') %></td> 
 <td><%= @user.get('role') %></td>
 <td><%= @user.get('email') %></td>
 <td><%= @user.get('region') %></td>

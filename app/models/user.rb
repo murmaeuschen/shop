@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   
-  attr_accessible :login_name, :first_name, :lastName, :password, :confirmPassword, :email, :region, :role
+  attr_accessible :login_name, :first_name, :last_name, :password, :confirmation_password, :email, :region, :role
   default_scope -> { order("id asc") }
   paginates_per 10
   

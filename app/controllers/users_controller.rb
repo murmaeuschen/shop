@@ -50,7 +50,7 @@ class UsersController < ApplicationController
     unless params[:field] == "all_columns"
       fields = params[:field] 
     else
-      fields = %w(login_name first_name lastName role)
+      fields = %w(login_name first_name last_name role)
     end
     users = case params[:method]
              when "start_with" then User.start_with(fields, params[:query])
