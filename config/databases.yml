@@ -1,8 +1,0 @@
-config/databases.yml
-cache/*
-log/*
-data/sql/*
-lib/filter/base/*
-lib/form/base/*
-lib/model/map/*
-lib/model/om/*
