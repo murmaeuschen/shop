@@ -1,4 +1,4 @@
- config/databases.yml
+config/databases.yml
 cache/*
 log/*
 data/sql/*
