@@ -99,7 +99,7 @@ class Shop.Views.UsersNew extends Backbone.View
       first_name: $(@el).find('#new_first_name').val()
       last_name: $(@el).find('#new_lastName').val()
       password: $(@el).find('#new_password').val()
-      confirmation_password: $(@el).find('#new_confirmPassword').val()
+      password_confirmation: $(@el).find('#new_confirmPassword').val()
       email: $(@el).find('#new_email').val()
       region: $(@el).find('#region :selected').val()
       role: $(@el).find('input:radio:checked').val()

@@ -20556,3 +20556,810 @@ Processing by UsersController#index as JSON
   [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
   [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
 Completed 200 OK in 82ms (Views: 57.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:04:37 +0200
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (137.0ms)
+Compiled bootstrap_and_overrides.css  (13591ms)  (pid 5492)
+Compiled main.css  (550ms)  (pid 5492)
+Compiled users.css  (10ms)  (pid 5492)
+Compiled application.css  (14613ms)  (pid 5492)
+Compiled jquery.js  (12ms)  (pid 5492)
+Compiled jquery_ujs.js  (1ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-transition.js  (1ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-alert.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-modal.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-dropdown.js  (1ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-scrollspy.js  (1ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-tab.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-tooltip.js  (3ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-popover.js  (1ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-button.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-collapse.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-carousel.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-typeahead.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap/bootstrap-affix.js  (2ms)  (pid 5492)
+Compiled twitter/bootstrap.js  (3126ms)  (pid 5492)
+Compiled underscore.js  (5ms)  (pid 5492)
+Compiled backbone.js  (3ms)  (pid 5492)
+Compiled jquery.validate.js  (5ms)  (pid 5492)
+Compiled shop.js  (391ms)  (pid 5492)
+Compiled helpers/app_helper.js  (80ms)  (pid 5492)
+Compiled users/duplicate.js  (407ms)  (pid 5492)
+Compiled users/edit.js  (23ms)  (pid 5492)
+Compiled users/index.js  (124ms)  (pid 5492)
+Compiled users/new.js  (26ms)  (pid 5492)
+Compiled users/show.js  (45ms)  (pid 5492)
+Compiled users/user.js  (83ms)  (pid 5492)
+Compiled models/user.js  (10ms)  (pid 5492)
+Compiled collections/backbone-pageable.js  (2ms)  (pid 5492)
+Compiled collections/backbone-paginator.js  (2ms)  (pid 5492)
+Compiled collections/users.js  (116ms)  (pid 5492)
+Compiled views/users/users_duplicate.js  (205ms)  (pid 5492)
+Compiled views/users/users_edit.js  (143ms)  (pid 5492)
+Compiled views/users/users_index.js  (99ms)  (pid 5492)
+Compiled views/users/users_new.js  (149ms)  (pid 5492)
+Compiled views/users/users_show.js  (13ms)  (pid 5492)
+Compiled views/users/users_user.js  (41ms)  (pid 5492)
+Compiled routers/users_router.js  (79ms)  (pid 5492)
+Compiled backbone-pageable.js  (2ms)  (pid 5492)
+Compiled backbone-paginator.js  (3ms)  (pid 5492)
+Compiled bootstrap.js  (6ms)  (pid 5492)
+Compiled application.js  (11715ms)  (pid 5492)
+Completed 200 OK in 30380ms (Views: 30053.0ms | ActiveRecord: 19.7ms)
+
+
+Started GET "/api/users?currentPage=2&perPage=10" for 127.0.0.1 at 2013-01-28 14:05:50 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"2", "perPage"=>"10"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.2ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 10
+Completed 200 OK in 304ms (Views: 28.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-28 14:05:54 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"currentPage"=>"1", "perPage"=>"10"}
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+Completed 200 OK in 58ms (Views: 32.5ms | ActiveRecord: 1.3ms)
+Connecting to database specified by database.yml
+  [1m[36m (12.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (9.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to RenameSucksNameVariable (20130127102108)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (2.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmation_password" varchar(255), "email" varchar(255), "region" varchar(255), "role" varchar(255)) [0m
+  [1m[35m (2.2ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South', 'Customer')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East', 'Supervisor')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North', 'Merchandiser')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South', 'Supervisor')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South', 'Supervisor')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South', 'Customer')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West', 'Supervisor')[0m
+  [1m[35m (1.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmation_password" varchar(255), "email" varchar(255), "region" varchar(255), "role" varchar(255)) [0m
+  [1m[35m (1.5ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South', 'Customer')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East', 'Supervisor')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South', 'Supervisor')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South', 'Supervisor')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South', 'Customer')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmation_password","email","region","role") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West', 'Supervisor')[0m
+  [1m[35m (1.2ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.8ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255), "region" varchar(255), "role" varchar(255)) [0m
+  [1m[35m (1.4ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South', 'Customer')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South', 'Customer')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East', 'Supervisor')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North', 'Merchandiser')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North', 'Merchandiser')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South', 'Supervisor')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South', 'Supervisor')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South', 'Customer')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West', 'Supervisor')[0m
+  [1m[35m (1.2ms)[0m  DROP TABLE "users"
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255), "region" varchar(255), "role" varchar(255)) [0m
+  [1m[35m (2.2ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South', 'Customer')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East', 'Supervisor')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North', 'Merchandiser')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South', 'Supervisor')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South', 'Supervisor')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South', 'Customer')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West', 'Supervisor')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130127102108'[0m
+  [1m[35m (197.6ms)[0m  commit transaction
+  [1m[36m (0.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (11.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddRoleToUser (20130115155545)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.9ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255), "region" varchar(255), "role" varchar(255)) [0m
+  [1m[35m (1.4ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South', 'Customer')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South', 'Customer')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East', 'Supervisor')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North', 'Merchandiser')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South', 'Merchandiser')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West', 'Merchandiser')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South', 'Supervisor')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South', 'Supervisor')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South', 'Customer')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South', 'Customer')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region","role") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West', 'Supervisor')[0m
+  [1m[35m (1.4ms)[0m  DROP TABLE "users"
+  [1m[36m (1.1ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255), "region" varchar(255)) [0m
+  [1m[35m (1.5ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130115155545'[0m
+  [1m[35m (167.1ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (8.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddRegionToUser (20130115151117)
+  [1m[36m (0.3ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.6ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255), "region" varchar(255)) [0m
+  [1m[35m (1.4ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com', 'West')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '', 'South')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '', 'South')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com', 'West')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com', 'East')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com', 'North')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com', 'North')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com', 'West')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com', 'West')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com', 'South')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com', 'South')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email","region") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com', 'West')[0m
+  [1m[35m (1.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "login_name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (1.3ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","login_name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130115151117'[0m
+  [1m[35m (186.6ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (10.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.6ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to AddFieldsToUser (20130115090200)
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (2.3ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (1.9ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (1.3ms)[0m  DROP TABLE "users"
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "first_name" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (1.3ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","first_name","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (1.1ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (1.1ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (2.9ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (1.5ms)[0m  DROP TABLE "users"
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (1.9ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (0.8ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255), "email" varchar(255)) [0m
+  [1m[35m (2.9ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA', 'sdf@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@', 'sdf@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2', '')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2', '')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a', 'sdfdsj@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q', 'sdfdsj@gmail.com')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q', 'sad@gmail.com')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w', 'sad@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q', 'ASDER@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w', 'sdf@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!', 'sdf@gmail.com')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!', 'sdf@gmail.com')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL, 'sezya.kot@gmail.com')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw', 'sdf@gmail.com')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword","email") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q', 'sdf@gmail.com')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "users"
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255)) [0m
+  [1m[35m (1.2ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL)[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.9ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255), "confirmPassword" varchar(255)) [0m
+  [1m[35m (1.6ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd', 'asdd')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA', '1!aA')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@', 'Aa2@')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2', 'aA@2')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2', 'A@a2')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a', '@A2a')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q', '!Q1q')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q', '@Q2q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w', '#W3w')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q', '!Q1q')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q', '!Q1q')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w', '@W2w')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q', '!Q1q')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!', 'aA1!')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!', 'Aa1!')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!', NULL)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw', '!2Qw')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password","confirmPassword") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q', '1q!Q')[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "users"
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255)) [0m
+  [1m[35m (1.3ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q')[0m
+  [1m[35m (0.9ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255), "password" varchar(255)) [0m
+  [1m[35m (1.6ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf', 'asdd')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf', '1!aA')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf', 'Aa2@')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last', 'aA@2')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last', 'A@a2')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar', '@A2a')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar', '!Q1q')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test', '@Q2q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test', '#W3w')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr', '!Q1q')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf', '!Q1q')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt', '!Q1q')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY', '@W2w')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf', '!Q1q')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy', 'aA1!')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy', 'Aa1!')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist', 'aA1!')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf', '!2Qw')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName","password") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf', '1q!Q')[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "users"
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255)) [0m
+  [1m[35m (1.1ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at","lastName") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf')[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (1.0ms)[0m  [1mCREATE TEMPORARY TABLE "altered_users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "lastName" varchar(255)) [0m
+  [1m[35m (1.2ms)[0m  SELECT * FROM "users"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919', 'asdf')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476', 'asdf')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477', 'asdf')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854', 'Last')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021', 'Last')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202', 'rar')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381', 'rar')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963', 'test')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500', 'test')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357', 'asdr')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521', 'asdf')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257', 'asdfrt')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364', 'SOY')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779', 'sdfsdf')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379', 'soyyy')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769', 'soyyy')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412', 'CatovichConsist')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856', 'asdf')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "altered_users" ("id","name","role","created_at","updated_at","lastName") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927', 'sdf')[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "users"
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "role" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.0ms)[0m  SELECT * FROM "altered_users"
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (3, 'sdf', 'edfsfsdffffffffff', '2013-01-20 19:47:26.632590', '2012-12-03 07:01:23.672919')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (4, 'werwer', 'edfsfsdf', '2013-01-20 19:50:21.017476', '2013-01-20 19:50:21.017476')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (5, 'werwer', 'edfsfsdf', '2013-01-20 19:50:31.851477', '2013-01-20 19:50:31.851477')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (7, '456', 'First', '2013-01-21 21:13:17.325070', '2013-01-25 15:28:11.934854')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (8, 'Afro', 'First', '2013-01-22 16:14:11.400957', '2013-01-25 15:28:10.916021')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (9, 'Arar', 'dsfarar', '2013-01-24 17:19:00.363202', '2013-01-24 17:19:00.363202')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (10, 'AFeda', 'dsfarar', '2013-01-24 17:19:28.200439', '2013-01-24 17:19:42.262381')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (11, 'test', 'test', '2013-01-24 18:12:22.500963', '2013-01-24 18:12:22.500963')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (12, 'BARks', 'test', '2013-01-24 18:14:05.759500', '2013-01-24 18:14:05.759500')[0m
+  [1m[35m (0.4ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (13, 'bark', 'sark', '2013-01-25 19:01:23.486357', '2013-01-25 19:01:23.486357')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (14, '890wesdf', 'edfsfsdf', '2013-01-26 10:18:42.992521', '2013-01-26 10:18:42.992521')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (15, 'QWER', 'SayonaraProblems', '2013-01-26 11:10:43.964257', '2013-01-26 11:10:43.964257')
+  [1m[36m (0.4ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (16, 'TEstDONE', 'forTestONly', '2013-01-26 11:20:26.283364', '2013-01-26 11:20:26.283364')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (17, 'What', 'up', '2013-01-26 11:21:03.856779', '2013-01-26 11:21:03.856779')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (18, 'asdfgh', 'forTestONlyasdfghjkl', '2013-01-27 09:54:39.804379', '2013-01-27 09:54:39.804379')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (19, 'kot', 'forTestONlyasdfghjkl', '2013-01-27 10:02:08.808769', '2013-01-27 10:02:08.808769')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (20, 'cat', 'Cat', '2013-01-27 10:50:25.803541', '2013-01-27 11:04:44.418412')[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (21, 'fffffffffffff', 'edfsfsdffffffffff', '2012-12-03 07:04:33.935856', '2012-12-03 07:04:33.935856')
+  [1m[36m (0.3ms)[0m  [1mINSERT INTO "users" ("id","name","role","created_at","updated_at") VALUES (22, 'Black', 'Resck', '2013-01-27 14:24:35.413331', '2013-01-27 14:25:39.102927')[0m
+  [1m[35m (0.7ms)[0m  DROP TABLE "altered_users"
+  [1m[36m (0.6ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130115090200'[0m
+  [1m[35m (218.3ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (11.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (4.8ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Migrating to CreateUsers (20130114174823)
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.8ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35m (0.8ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20130114174823'
+  [1m[36m (170.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+  [1m[36m (11.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (8.3ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+  [1m[35m (0.3ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130114174823')[0m
+  [1m[35m (142.3ms)[0m  commit transaction
+Migrating to AddFieldsToUser (20130115090200)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (13.5ms)[0m  ALTER TABLE "users" ADD "last_name" varchar(255)
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD "email" varchar(255)[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD "first_name" varchar(255)
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130115090200')[0m
+  [1m[35m (126.0ms)[0m  commit transaction
+Migrating to AddRegionToUser (20130115151117)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.9ms)[0m  ALTER TABLE "users" ADD "region" varchar(255)
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130115151117')[0m
+  [1m[35m (148.9ms)[0m  commit transaction
+Migrating to AddRoleToUser (20130115155545)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "role" varchar(255)
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130115155545')[0m
+  [1m[35m (110.1ms)[0m  commit transaction
+Migrating to AddDeviseToUsers (20130127120254)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (2.2ms)[0m  ALTER TABLE "users" ADD "login_name" varchar(255) DEFAULT '' NOT NULL
+  [1m[36m (2.0ms)[0m  [1mALTER TABLE "users" ADD "encrypted_password" varchar(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (1.1ms)[0m  ALTER TABLE "users" ADD "reset_password_token" varchar(255)
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "reset_password_sent_at" datetime[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "remember_created_at" datetime
+  [1m[36m (0.9ms)[0m  [1mALTER TABLE "users" ADD "sign_in_count" integer DEFAULT 0[0m
+  [1m[35m (0.8ms)[0m  ALTER TABLE "users" ADD "current_sign_in_at" datetime
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_at" datetime[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "current_sign_in_ip" varchar(255)
+  [1m[36m (1.4ms)[0m  [1mALTER TABLE "users" ADD "last_sign_in_ip" varchar(255)[0m
+  [1m[35m (1.3ms)[0m  ALTER TABLE "users" ADD "failed_attempts" integer DEFAULT 0
+  [1m[36m (1.2ms)[0m  [1mALTER TABLE "users" ADD "locked_at" datetime[0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX "index_users_on_login_name" ON "users" ("login_name")
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (1.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130127120254')
+  [1m[36m (194.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:34:56 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.8ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (32.3ms)
+Compiled users/duplicate.js  (423ms)  (pid 5974)
+Compiled users/new.js  (16ms)  (pid 5974)
+Compiled views/users/users_duplicate.js  (695ms)  (pid 5974)
+Compiled views/users/users_new.js  (231ms)  (pid 5974)
+Compiled application.js  (286ms)  (pid 5974)
+Completed 200 OK in 3327ms (Views: 2949.6ms | ActiveRecord: 98.5ms)
+
+
+Started GET "/api/users.json" for 127.0.0.1 at 2013-01-28 14:35:14 +0200
+Processing by UsersController#index as JSON
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+Completed 200 OK in 254ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-28 14:35:32 +0200
+Processing by UsersController#create as JSON
+  Parameters: {"login_name"=>"kot", "first_name"=>"Cat", "last_name"=>"Catovich", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator", "currentPage"=>"1", "perPage"=>"10", "user"=>{"login_name"=>"kot", "first_name"=>"Cat", "last_name"=>"Catovich", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator"}}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.5ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login_name" = 'kot' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (16.4ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "failed_attempts", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "locked_at", "login_name", "region", "remember_created_at", "reset_password_sent_at", "reset_password_token", "role", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 28 Jan 2013 12:35:32 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sezya.kot@gmail.com"], ["encrypted_password", "$2a$10$7QnEmcHWY3wtrvRveXkVM.GBjdE2Ri/pa6uc8fLZIUFYEVjO6jyvy"], ["failed_attempts", 0], ["first_name", "Cat"], ["last_name", "Catovich"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["locked_at", nil], ["login_name", "kot"], ["region", "South"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["role", "Administrator"], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 12:35:32 UTC +00:00]]
+  [1m[35m (169.3ms)[0m  commit transaction
+Completed 201 Created in 778ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:35:38 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.3ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 255ms (Views: 231.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/api/users.json" for 127.0.0.1 at 2013-01-28 14:35:52 +0200
+Processing by UsersController#index as JSON
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.1ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+Completed 200 OK in 62ms (Views: 19.6ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-28 14:35:58 +0200
+Processing by UsersController#create as JSON
+  Parameters: {"created_at"=>"2013-01-28T12:35:32Z", "email"=>"sezya.kot@gmail.com", "first_name"=>"Cat", "last_name"=>"Catovich", "login_name"=>"kotyara", "region"=>"South", "role"=>"Administrator", "updated_at"=>"2013-01-28T12:35:32Z", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "currentPage"=>"1", "perPage"=>"10", "user"=>{"login_name"=>"kotyara", "first_name"=>"Cat", "last_name"=>"Catovich", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator"}}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.6ms)[0m  SELECT 1 AS one FROM "users" WHERE "users"."login_name" = 'kotyara' LIMIT 1
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[36mSQL (2.1ms)[0m  [1mINSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "failed_attempts", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "locked_at", "login_name", "region", "remember_created_at", "reset_password_sent_at", "reset_password_token", "role", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Mon, 28 Jan 2013 12:35:58 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sezya.kot@gmail.com"], ["encrypted_password", "$2a$10$WJG0duGnzT3p8GJuEC8Yz.f/qX5079Qk2v2TOrKgMU.obUchohfmK"], ["failed_attempts", 0], ["first_name", "Cat"], ["last_name", "Catovich"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["locked_at", nil], ["login_name", "kotyara"], ["region", "South"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["role", "Administrator"], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 12:35:58 UTC +00:00]]
+  [1m[35m (143.6ms)[0m  commit transaction
+Completed 201 Created in 427ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:36:03 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (5.5ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 207ms (Views: 179.7ms | ActiveRecord: 6.1ms)
+
+
+Started PUT "/api/users/2" for 127.0.0.1 at 2013-01-28 14:36:17 +0200
+Processing by UsersController#update as JSON
+  Parameters: {"created_at"=>"2013-01-28T12:35:58Z", "email"=>"sezya.kot@gmail.com", "first_name"=>"Cat", "id"=>"2", "last_name"=>"Catovichinsky", "login_name"=>"kotyara", "region"=>"South", "role"=>"Administrator", "updated_at"=>"2013-01-28T12:35:58Z", "user"=>{"login_name"=>"kotyara", "first_name"=>"Cat", "last_name"=>"Catovichinsky", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator"}}
+  [1m[36mUser Load (1.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY id asc LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE ("users"."login_name" = 'kotyara' AND "users"."id" != 2) LIMIT 1[0m
+  [1m[35m (0.9ms)[0m  UPDATE "users" SET "last_name" = 'Catovichinsky', "updated_at" = '2013-01-28 12:36:17.957706' WHERE "users"."id" = 2
+  [1m[36m (157.4ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 203ms (ActiveRecord: 0.0ms)
+
+
+Started PUT "/api/users/2" for 127.0.0.1 at 2013-01-28 14:36:21 +0200
+Processing by UsersController#update as JSON
+  Parameters: {"created_at"=>"2013-01-28T12:35:58Z", "email"=>"sezya.kot@gmail.com", "first_name"=>"Cat", "id"=>"2", "last_name"=>"Catovichinsky", "login_name"=>"kotyara", "region"=>"South", "role"=>"Administrator", "updated_at"=>"2013-01-28T12:35:58Z", "user"=>{"login_name"=>"kotyara", "first_name"=>"Cat", "last_name"=>"Catovichinsky", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator"}}
+  [1m[35mUser Load (1.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY id asc LIMIT 1  [["id", "2"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mUser Exists (0.4ms)[0m  SELECT 1 AS one FROM "users" WHERE ("users"."login_name" = 'kotyara' AND "users"."id" != 2) LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+Completed 204 No Content in 39ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:36:26 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 225ms (Views: 201.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/api/users.json" for 127.0.0.1 at 2013-01-28 14:36:46 +0200
+Processing by UsersController#index as JSON
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 62ms (Views: 18.1ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/api/users?currentPage=1&perPage=10" for 127.0.0.1 at 2013-01-28 14:36:53 +0200
+Processing by UsersController#create as JSON
+  Parameters: {"created_at"=>"2013-01-28T12:35:58Z", "email"=>"sezya.kot@gmail.com", "first_name"=>"Cat", "last_name"=>"Catovichinsky", "login_name"=>"kotin", "region"=>"South", "role"=>"Administrator", "updated_at"=>"2013-01-28T12:36:17Z", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "currentPage"=>"1", "perPage"=>"10", "user"=>{"login_name"=>"kotin", "first_name"=>"Cat", "last_name"=>"Catovichinsky", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "email"=>"sezya.kot@gmail.com", "region"=>"South", "role"=>"Administrator"}}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT 1 AS one FROM "users" WHERE "users"."login_name" = 'kotin' LIMIT 1[0m
+Binary data inserted for `string` type on column `encrypted_password`
+  [1m[35mSQL (2.7ms)[0m  INSERT INTO "users" ("created_at", "current_sign_in_at", "current_sign_in_ip", "email", "encrypted_password", "failed_attempts", "first_name", "last_name", "last_sign_in_at", "last_sign_in_ip", "locked_at", "login_name", "region", "remember_created_at", "reset_password_sent_at", "reset_password_token", "role", "sign_in_count", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Mon, 28 Jan 2013 12:36:54 UTC +00:00], ["current_sign_in_at", nil], ["current_sign_in_ip", nil], ["email", "sezya.kot@gmail.com"], ["encrypted_password", "$2a$10$G.wD.EDle8mRAq0Zhhlve.Au3ZC7pMj7.LJq0xobKOWeqHJIZI6OO"], ["failed_attempts", 0], ["first_name", "Cat"], ["last_name", "Catovichinsky"], ["last_sign_in_at", nil], ["last_sign_in_ip", nil], ["locked_at", nil], ["login_name", "kotin"], ["region", "South"], ["remember_created_at", nil], ["reset_password_sent_at", nil], ["reset_password_token", nil], ["role", "Administrator"], ["sign_in_count", 0], ["updated_at", Mon, 28 Jan 2013 12:36:54 UTC +00:00]]
+  [1m[36m (146.4ms)[0m  [1mcommit transaction[0m
+Completed 201 Created in 419ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:36:58 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 218ms (Views: 188.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2013-01-28 14:37:11 +0200
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (1.7ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 22 ORDER BY id asc LIMIT 1
+  Rendered devise/shared/_links.erb (11.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (113.0ms)
+Completed 200 OK in 470ms (Views: 388.9ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2013-01-28 14:37:40 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzFizTAeZmu8y8KOOJa+pNgIdXIoZJqe2P6sRtWO0As=", "user"=>{"email"=>"sezya.kot@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."email" = 'sezya.kot@gmail.com' ORDER BY id asc LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = '2013-01-28 12:37:40.912402', "current_sign_in_at" = '2013-01-28 12:37:40.912402', "last_sign_in_ip" = '127.0.0.1', "current_sign_in_ip" = '127.0.0.1', "sign_in_count" = 1, "updated_at" = '2013-01-28 12:37:40.915675' WHERE "users"."id" = 1[0m
+  [1m[35m (140.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 455ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-28 14:37:41 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (1.5ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 178ms (Views: 152.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2013-01-28 14:38:05 +0200
+
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.4) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.4) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/kot/.rvm/gems/ruby-1.9.3-p362@rails32/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.6ms)

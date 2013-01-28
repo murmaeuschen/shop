@@ -28,7 +28,7 @@
 	
 	 <div class="row-fluid">
 		<label for="confirm_password" class="span2">Confirm Password</label>
-		<input name="confirmation_password" type="password" id="new_confirmPassword" class="span3"/>
+		<input name="password_confirmation" type="password" id="new_confirmPassword" class="span3"/>
     </div>
 
 	<div class="row-fluid">
