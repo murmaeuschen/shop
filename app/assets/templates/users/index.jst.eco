@@ -15,7 +15,8 @@
         <h4>
             Search by
         </h4><label>Field Filter</label><br>
-        <form action="/users/filter" class="filters form-inline">
+        <form action="/" class="filters form-inline">
+				<input type="hidden" name="filter" value="true">
             <select name="field">
                 <option value="login_name">
                     User Name
@@ -26,7 +27,7 @@
                 <option value="first_name">
                     First Name
                 </option>
-                <option value="lastName">
+                <option value="last_name">
                     Last Name
                 </option>
                 <option value="role">
@@ -50,7 +51,7 @@
                     does not contain
                 </option>
             </select> 
-            <input type="text"> <input type="submit" id="search" class= "btn btn-primary">
+            <input type="text" name="query"> <input type="submit" id="search" class= "btn btn-primary">
         </form>
     </div>
     <div class="paging">
