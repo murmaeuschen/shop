@@ -2,7 +2,30 @@ class UsersController < ApplicationController
   respond_to :html, :json
 
   def index
-    @users = User.page(params[:currentPage], params[:perPage], params[:numPages])
+    if params[:filter]
+      unless params[:field] == "all_columns"
+        fields = params[:field] 
+      else
+        fields = %w(login_name first_name last_name role)
+      end
+      @users = case params[:method]
+               when "start_with" then User.start_with(fields, params[:query])
+               when "equals" then User.equals(fields, params[:query])
+               when "not_equal_to" then User.not_equal_to(fields, params[:query])
+               when "contains" then User.contains(fields, params[:query])
+               else User.does_not_contain(fields, params[:query]) 
+               end
+      @users = @users.page(params[:currentPage], params[:perPage], params[:numPages])
+    else
+      @users = User.page(params[:currentPage], params[:perPage], params[:numPages])
+    end
+
+    @filters = {
+      field: params[:field],
+      method: params[:method],
+      query: params[:query]
+    }
+
     @pagination = {
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
@@ -46,21 +69,4 @@ class UsersController < ApplicationController
     respond_with User.destroy(params[:id])
   end
 
-  def filter
-    unless params[:field] == "all_columns"
-      fields = params[:field] 
-    else
-      fields = %w(login_name first_name last_name role)
-    end
-    users = case params[:method]
-             when "start_with" then User.start_with(fields, params[:query])
-             when "equals" then User.equals(fields, params[:query])
-             when "not_equal_to" then User.not_equal_to(fields, params[:query])
-             when "contains" then User.contains(fields, params[:query])
-             else User.does_not_contain(fields, params[:query]) 
-             end
-
-    respond_with users
-
-  end
 end

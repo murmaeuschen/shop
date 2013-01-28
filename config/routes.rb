@@ -1,5 +1,8 @@
 Shop::Application.routes.draw do
   
+  devise_for  :users,
+              :skip => [:registrations, :confirmations]
+  
   scope "api" do
     resources :users
   end
