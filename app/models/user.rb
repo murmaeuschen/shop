@@ -41,7 +41,7 @@ class User < ActiveRecord::Base
                           :on           => :update
 
   default_scope -> { order("id asc") }
-  paginates_per 10
+  #paginates_per 10
   
   scope :start_with, lambda { |fields, query| where(
       if fields.kind_of? Array 

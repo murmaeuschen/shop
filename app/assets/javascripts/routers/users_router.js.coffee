@@ -29,7 +29,7 @@ class Shop.Routers.Users extends Backbone.Router
   
   edit: (id) ->
     usr = @collection.get(id)
-    usr['url'] = "/api/users/#{id}"
+    
     view = new Shop.Views.UsersEdit({model: usr})
 
   duplicate: (id) ->

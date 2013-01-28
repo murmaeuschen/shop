@@ -2,29 +2,18 @@ class UsersController < ApplicationController
   respond_to :html, :json
 
   def index
-    if params[:filter]
-      unless params[:field] == "all_columns"
-        fields = params[:field] 
+    @users = if params[:filter]
+      fields = if params[:field] == "all_columns"
+        %w(login_name first_name last_name role)
       else
-        fields = %w(login_name first_name last_name role)
+        params[:field] 
       end
-      @users = case params[:method]
-               when "start_with" then User.start_with(fields, params[:query])
-               when "equals" then User.equals(fields, params[:query])
-               when "not_equal_to" then User.not_equal_to(fields, params[:query])
-               when "contains" then User.contains(fields, params[:query])
-               else User.does_not_contain(fields, params[:query]) 
-               end
-      @users = @users.page(params[:currentPage], params[:perPage], params[:numPages])
+      User.send params[:method].intern, fields, params[:query]
     else
-      @users = User.page(params[:currentPage], params[:perPage], params[:numPages])
+      User.scoped
     end
 
-    @filters = {
-      field: params[:field],
-      method: params[:method],
-      query: params[:query]
-    }
+    @users = @users.page(params[:currentPage]).per(params[:perPage])
 
     @pagination = {
       current_page: @users.current_page,
