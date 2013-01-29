@@ -13,12 +13,13 @@ class UsersController < ApplicationController
       User.scoped
     end
 
-    @users = @users.page(params[:currentPage]).per(params[:perPage])
+    @users = @users.order(params[:orderBy]).page(params[:currentPage]).per(params[:perPage])
 
     @pagination = {
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
       per_page:     @users.limit_value,
+      order_by:     "id ASC"
     }
 
     respond_to do |format|

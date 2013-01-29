@@ -14,7 +14,8 @@ class Shop.Collections.Users extends Backbone.Collection
       numPages: @numPages
       prev: false
       next: false
-      pageParam: "page"
+      orderBy: @orderBy
+      #pageParam: "page"
   
   parse: (resp) =>
     @init_pagination(resp)
@@ -24,10 +25,19 @@ class Shop.Collections.Users extends Backbone.Collection
     @currentPage = options['current_page']
     @perPage = options['per_page']
     @numPages = options['num_pages']
-    
+    @orderBy = options['order_by']
+
   howManyPer: (newPerPage) =>
     @currentPage = 1
     @perPage = newPerPage
+    @fetch()
+
+  sortTable: (ident) =>
+    if @orderBy.match /ASC/i
+      @orderBy = "#{ident} DESC"
+    else
+      @orderBy = "#{ident} ASC"
+    console.log @orderBy
     @fetch()
         
   nextPage: =>
@@ -43,7 +53,7 @@ class Shop.Collections.Users extends Backbone.Collection
     return @fetch()
 
   url: =>
-    @baseUrl + '?' + $.param({currentPage: @currentPage, perPage: @perPage})
+    @baseUrl + '?' + $.param({orderBy: @orderBy, currentPage: @currentPage, perPage: @perPage}) #?filter=true&field=login_name&method=start_with&query=k
 
   duplicateUser: (userId) ->
     curAttr = @get(userId).attributes

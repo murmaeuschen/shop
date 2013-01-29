@@ -9,7 +9,7 @@ class Shop.Views.UsersIndex extends Backbone.View
     'click #first'             : 'first'
     'click #last'              : 'last'
     'click .paging a'          : 'changeShownNum'
-    #'click .setTen'            : 'changeToTen'
+    'click #forSort'           : 'sortUsers'
 
   initialize: ->
     @collection.on('reset', @render, @)
@@ -51,4 +51,10 @@ class Shop.Views.UsersIndex extends Backbone.View
     per = $(e.target).text().substring(5,7)
     @collection.howManyPer(per)
     @render
- 
+
+  sortUsers: (e) ->
+    e.preventDefault()
+    str = $(e.target).text()
+    colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
+    @collection.sortTable(colName)
+    @render

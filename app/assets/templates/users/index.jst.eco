@@ -60,22 +60,22 @@
     <table id="users" class="table table-condensed">
         <tbody>
             <tr>
-                <th>
+                <th id="forSort">
                     User name
                 </th>
-                <th>
+                <th id="forSort">
                     First name
                 </th>
-                <th>
+                <th id="forSort">
                     Last name
                 </th>
-                <th>
+                <th id="forSort">
                     Role
                 </th>
-                <th>
+                <th id="forSort">
                     Email
                 </th>
-                <th>
+                <th id="forSort">
                     Region
                 </th>
                 <th>
