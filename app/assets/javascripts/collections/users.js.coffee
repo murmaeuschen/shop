@@ -15,7 +15,7 @@ class Shop.Collections.Users extends Backbone.Collection
       prev: false
       next: false
       orderBy: @orderBy
-      #pageParam: "page"
+      pageParam: "page"
   
   parse: (resp) =>
     @init_pagination(resp)
