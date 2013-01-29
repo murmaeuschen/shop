@@ -3,12 +3,12 @@ class UsersController < ApplicationController
 
   def index
     @users = if params[:filter]
-      fields = if params[:field] == "all_columns"
+      fields = if params[:filter][:fields] == "all_columns"
         %w(login_name first_name last_name role)
       else
-        params[:field] 
+        params[:filter][:fields] 
       end
-      User.send params[:method].intern, fields, params[:query]
+      User.send params[:filter][:scope].intern, fields, params[:filter][:request]
     else
       User.scoped
     end
