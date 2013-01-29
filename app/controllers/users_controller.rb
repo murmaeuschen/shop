@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
       per_page:     @users.limit_value,
-      order_by:     "id ASC"
+      total_count:  User.count
     }
 
     respond_to do |format|

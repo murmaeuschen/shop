@@ -15,7 +15,7 @@ class Shop.Collections.Users extends Backbone.Collection
       prev: false
       next: false
       orderBy: @orderBy
-      pageParam: "page"
+      totalCount: @totalCount
   
   parse: (resp) =>
     @init_pagination(resp)
@@ -25,7 +25,7 @@ class Shop.Collections.Users extends Backbone.Collection
     @currentPage = options['current_page']
     @perPage = options['per_page']
     @numPages = options['num_pages']
-    @orderBy = options['order_by']
+    @totalCount = options['total_count']
 
   howManyPer: (newPerPage) =>
     @currentPage = 1
@@ -37,7 +37,6 @@ class Shop.Collections.Users extends Backbone.Collection
       @orderBy = "#{ident} DESC"
     else
       @orderBy = "#{ident} ASC"
-    console.log @orderBy
     @fetch()
         
   nextPage: =>

@@ -8,7 +8,7 @@
         <button id="user_create_button" class= "btn btn-primary">Create New User</button>
     </section>
     <div>
-        Number of Found Users: <%= @users.length %>
+        Number of Found Users: <%= @pageInfo.totalCount %>
     </div>
     
     <div class="panel">
