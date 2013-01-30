@@ -16,8 +16,8 @@
             Search by
         </h4><label>Field Filter</label><br>
         <form action="/" class="filters form-inline">
-            <select id="filterField" name="filter[fields]">
-                <option value="login_name">
+            <select id="filterField" name="fields">
+            <option value="login_name">
                     Login Name
                 </option>
                 <option value="all_columns">
@@ -33,8 +33,8 @@
                     Role
                 </option>
             </select> 
-            <select id="filterWith" name="filter[scope]">
-                <option value="start_with">
+            <select id="filterWith" name="scope">
+            <option value="start_with">
                     starts with
                 </option>
                 <option value="equals">
@@ -50,7 +50,7 @@
                     does not contain
                 </option>
             </select> 
-            <input type="text" id="filterText" name="filter[request]"> <input type="submit" id="search" class= "btn btn-primary">
+            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary">
         </form>
     </div>
     <div class="paging">

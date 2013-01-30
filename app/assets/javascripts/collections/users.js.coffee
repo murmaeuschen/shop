@@ -44,12 +44,9 @@ class Shop.Collections.Users extends Backbone.Collection
     @fetch()
 
   filterTable: (newField, newStartWith, newRequest) =>
-    @field = newField
+    @fields = newField
     @start_with = newStartWith
     @request = newRequest
-    console.log @field
-    console.log @start_with
-    console.log @request
     @fetch()
         
   nextPage: =>
