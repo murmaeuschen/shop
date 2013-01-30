@@ -10,6 +10,7 @@ class Shop.Views.UsersIndex extends Backbone.View
     'click #last'              : 'last'
     'click .paging a'          : 'changeShownNum'
     'click #forSort'           : 'sortUsers'
+    'click #search'            : 'setFilter'
 
   initialize: ->
     @collection.on('reset', @render, @)
@@ -57,4 +58,12 @@ class Shop.Views.UsersIndex extends Backbone.View
     str = $(e.target).text()
     colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
     @collection.sortTable(colName)
+    @render
+
+  setFilter: (e) ->
+    e.preventDefault()
+    newField = $(@el).find('#filterField :selected').val()
+    newStartWith = $(@el).find('#filterWith :selected').val()
+    newRequest = $(@el).find('#filterText').val()
+    @collection.filterTable(newField, newStartWith, newRequest)
     @render
