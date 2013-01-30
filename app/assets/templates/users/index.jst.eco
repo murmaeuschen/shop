@@ -16,7 +16,7 @@
             Search by
         </h4><label>Field Filter</label><br>
         <form action="/" class="filters form-inline">
-            <select name="filter[fields]">
+            <select name="fields">
                 <option value="login_name">
                     User Name
                 </option>
@@ -33,7 +33,7 @@
                     Role
                 </option>
             </select> 
-            <select name="filter[scope]">
+            <select name="scope">
                 <option value="start_with">
                     starts with
                 </option>
@@ -50,7 +50,7 @@
                     does not contain
                 </option>
             </select> 
-            <input type="text" name="filter[request]"> <input type="submit" id="search" class= "btn btn-primary">
+            <input type="text" name="request"> <input type="submit" id="search" class= "btn btn-primary">
         </form>
     </div>
     <div class="paging">

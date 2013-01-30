@@ -2,13 +2,13 @@ class UsersController < ApplicationController
   respond_to :html, :json
 
   def index
-    @users = if params[:filter]
-      fields = if params[:filter][:fields] == "all_columns"
+    @users = if params[:request]
+      fields = if params[:fields] == "all_columns"
         %w(login_name first_name last_name role)
       else
-        params[:filter][:fields] 
+        params[:fields] 
       end
-      User.send params[:filter][:scope].intern, fields, params[:filter][:request]
+      User.send params[:scope].intern, fields, params[:request]
     else
       User.scoped
     end
