@@ -38,9 +38,9 @@ class Shop.Collections.Users extends Backbone.Collection
 
   sortTable: (ident) =>
     if @orderBy.match /ASC/i
-      @orderBy = "#{ident} DESC"
+      @orderBy = "#{ident}"
     else
-      @orderBy = "#{ident} ASC"
+      @orderBy = "#{ident}"
     @fetch()
 
   filterTable: (newField, newStartWith, newRequest) =>

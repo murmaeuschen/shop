@@ -57,6 +57,8 @@ class Shop.Views.UsersIndex extends Backbone.View
     e.preventDefault()
     str = $(e.target).text()
     colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
+    if colName = "user_name"
+      colName = "login_name"
     @collection.sortTable(colName)
     @render
 

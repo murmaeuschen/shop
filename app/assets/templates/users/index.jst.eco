@@ -18,7 +18,7 @@
         <form action="/" class="filters form-inline">
             <select id="filterField" name="fields">
             <option value="login_name">
-                    Login Name
+                    User Name
                 </option>
                 <option value="all_columns">
                     All Columns
@@ -60,7 +60,7 @@
         <tbody>
             <tr>
                 <th id="forSort">
-                    Login name
+                    User name
                 </th>
                 <th id="forSort">
                     First name

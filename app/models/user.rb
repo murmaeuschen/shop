@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
                           :allow_blank  => true,
                           :on           => :update
 
-  default_scope -> { order("id asc") }
+  #default_scope -> { order("id asc") }
     
   scope :start_with, lambda { |fields, query| where(
       if fields.kind_of? Array 

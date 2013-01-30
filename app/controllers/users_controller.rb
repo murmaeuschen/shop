@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       User.scoped
     end
 
-    @users = @users.order(params[:orderBy]).page(params[:currentPage]).per(params[:perPage])
+    @users = User.order("first_name").page(params[:currentPage]).per(params[:perPage])
 
     @pagination = {
       current_page: @users.current_page,
