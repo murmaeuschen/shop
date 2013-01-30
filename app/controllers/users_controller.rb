@@ -13,13 +13,13 @@ class UsersController < ApplicationController
       User.scoped
     end
 
-    @users = User.order("first_name").page(params[:currentPage]).per(params[:perPage])
+    @users = @users.reorder(params[:orderBy]).page(params[:currentPage]).per(params[:perPage])
 
     @pagination = {
       current_page: @users.current_page,
       num_pages:    @users.num_pages,
       per_page:     @users.limit_value,
-      total_count:  User.count
+      total_count:  User.count,
     }
 
     respond_to do |format|

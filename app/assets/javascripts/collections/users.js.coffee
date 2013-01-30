@@ -29,20 +29,21 @@ class Shop.Collections.Users extends Backbone.Collection
     @perPage = options['per_page']
     @numPages = options['num_pages']
     @totalCount = options['total_count']
-    @orderBy = ""
+    @orderBy = "id asc"
 
   howManyPer: (newPerPage) =>
     @currentPage = 1
     @perPage = newPerPage
     @fetch()
 
-  sortTable: (ident) =>
-    if @orderBy.match /ASC/i
-      @orderBy = "#{ident}"
-    else
-      @orderBy = "#{ident}"
+  sortTableAsc: (ident) =>
+    @orderBy = "#{ident} asc"
     @fetch()
 
+  sortTableDesc: (ident) =>
+    @orderBy = "#{ident} desc"
+    @fetch()
+    
   filterTable: (newField, newStartWith, newRequest) =>
     @fields = newField
     @start_with = newStartWith

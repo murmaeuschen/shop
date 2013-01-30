@@ -9,7 +9,8 @@ class Shop.Views.UsersIndex extends Backbone.View
     'click #first'             : 'first'
     'click #last'              : 'last'
     'click .paging a'          : 'changeShownNum'
-    'click #forSort'           : 'sortUsers'
+    'click #forSort'           : 'sortUsersAsc'
+    'dblclick #forSort'        : 'sortUsersDesc'
     'click #search'            : 'setFilter'
 
   initialize: ->
@@ -17,7 +18,7 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.on('add', @render, @)
     @collection.on('destroy', @render, @)
     @collection.on('change', @render, @)
-    
+    @trigger('click #search', @collection.filterTable('login_name', 'start_with', ''))
             
   render: ->
     $(@el).html(@template(users: @collection, pageInfo: @collection.pageInfo() ))
@@ -53,13 +54,22 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.howManyPer(per)
     @render
 
-  sortUsers: (e) ->
+  sortUsersAsc: (e) ->
     e.preventDefault()
     str = $(e.target).text()
     colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
-    if colName = "user_name"
+    if colName is "user_name"
       colName = "login_name"
-    @collection.sortTable(colName)
+    @collection.sortTableAsc(colName)
+    @render
+
+  sortUsersDesc: (e) ->
+    e.preventDefault()
+    str = $(e.target).text()
+    colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
+    if colName is "user_name"
+      colName = "login_name"
+    @collection.sortTableDesc(colName)
     @render
 
   setFilter: (e) ->
