@@ -9,14 +9,11 @@ class Shop.Routers.Users extends Backbone.Router
     ":id/duplicate" : "duplicate"
   
   initialize: ->
-    #@route /users\/?\?(.*)/, "index", @index # users?page=10&source=public
     @collection = new Shop.Collections.Users($('#app').data('users'))
-    @collection.init_pagination($('#app').data('pagination')) #unexpecteble change _ to -  DANGER!!!
-    #@collection.fetch()
+    @collection.init_pagination($('#app').data('pagination')) #unexpecteble change _ to - from ROR to JS DANGER!!!
+    
     
   index: ->
-    #params = _.strToParams(params)
-    #@collection.setPage(params["page"]) if params["page"]?
     view = new Shop.Views.UsersIndex(collection: @collection)
     $('#app').html(view.render().el)
   

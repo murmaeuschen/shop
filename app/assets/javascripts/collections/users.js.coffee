@@ -52,7 +52,6 @@ class Shop.Collections.Users extends Backbone.Collection
     else
       @sortStore += ", " + @orderBy
     @orderBy = @sortStore
-    console.log @orderBy
     @fetch()
 
     
