@@ -20504,3 +20504,105 @@ Processing by UsersController#index as HTML
   Rendered users/index.html.erb within layouts/application (194.3ms)
 Completed 200 OK in 839ms (Views: 740.2ms | ActiveRecord: 21.2ms)
 >>>>>>> a5391c31bab4e268d3757b22801acce9e1750f88
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-03 11:44:59 +0200
+Connecting to database specified by database.yml
+Processing by UsersController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" ORDER BY id asc LIMIT 10 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (80.8ms)
+Compiled users/index.js  (317ms)  (pid 31929)
+Compiled application.js  (101ms)  (pid 31929)
+Completed 200 OK in 1410ms (Views: 1277.5ms | ActiveRecord: 13.5ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (43.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+Migrating to CreateItems (20130131101840)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "item_name" varchar(255), "item_description" varchar(255), "price" decimal, "dimension" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130131101840')[0m
+  [1m[35m (21.8ms)[0m  commit transaction
+Migrating to CreateItemstables (20130131101934)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "itemstables" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "quantity" integer, "price_per_line" decimal, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ('20130131101934')[0m
+  [1m[35m (8.5ms)[0m  commit transaction
+  [1m[36m (0.7ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (37.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (34.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (34.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (35.8ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+Migrating to CreateItems (20130131101840)
+Migrating to CreateItemstables (20130131101934)
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Connecting to database specified by database.yml
+  [1m[36m (34.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (96.7ms)[0m  [1mINSERT INTO "items" ("created_at", "dimension", "item_description", "item_name", "price", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["created_at", Thu, 31 Jan 2013 10:30:25 UTC +00:00], ["dimension", nil], ["item_description", "Monitor LG"], ["item_name", "Monitor"], ["price", #<BigDecimal:a1ad1a0,'0.2E2',9(36)>], ["updated_at", Thu, 31 Jan 2013 10:30:25 UTC +00:00]]
+  [1m[35m (6.9ms)[0m  commit transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (35.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+Migrating to CreateItems (20130131101840)
+Migrating to CreateItemstables (20130131101934)
+Migrating to AddItemToItemsTables (20130131103701)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "items_tables" ADD "item" references
+SQLite3::SQLException: no such table: items_tables: ALTER TABLE "items_tables" ADD "item" references
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (35.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+Migrating to CreateItems (20130131101840)
+Migrating to CreateItemstables (20130131101934)
+Migrating to AddItemToItemsTables (20130131103701)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "items_tables" ADD "item" references
+SQLite3::SQLException: no such table: items_tables: ALTER TABLE "items_tables" ADD "item" references
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (35.6ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateUsers (20130114174823)
+Migrating to AddFieldsToUser (20130115090200)
+Migrating to AddRegionToUser (20130115151117)
+Migrating to AddRoleToUser (20130115155545)
+Migrating to RenameSucksNameVariable (20130127102108)
+Migrating to CreateItems (20130131101840)
+Migrating to CreateItemstables (20130131101934)
+Migrating to AddItemToItemstables (20130131104202)
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "itemstables" ADD "item" references
+SQLite3::SQLException: near "references": syntax error: ALTER TABLE "itemstables" ADD "item" references
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m

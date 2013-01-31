@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Quantity:</b>
+  <%= @itemstable.quantity %>
+</p>
+
+<p>
+  <b>Price per line:</b>
+  <%= @itemstable.price_per_line %>
+</p>
+
+
+<%= link_to 'Edit', edit_itemstable_path(@itemstable) %> |
+<%= link_to 'Back', itemstables_path %>

@@ -1,0 +1,25 @@
+<%= form_for(@itemstable) do |f| %>
+  <% if @itemstable.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@itemstable.errors.count, "error") %> prohibited this itemstable from being saved:</h2>
+
+      <ul>
+      <% @itemstable.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :quantity %><br />
+    <%= f.number_field :quantity %>
+  </div>
+  <div class="field">
+    <%= f.label :price_per_line %><br />
+    <%= f.text_field :price_per_line %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

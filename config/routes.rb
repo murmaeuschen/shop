@@ -1,5 +1,11 @@
 Shop::Application.routes.draw do
   
+  resources :itemstables
+
+
+  resources :items
+
+
   scope "api" do
     resources :users
   end

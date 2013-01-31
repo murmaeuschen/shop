@@ -1,35 +1,45 @@
-<form id="edit_user">
+<form id="edit_user" class="form-horizontal">
 
 
 <h2>Edit User</h2>  
 <h4>This page is appointed for editing existing user for particular role</h4>
 
-<div class="row-fluid">
+<fieldset>
+<div class="control-group">
   <label for="first_name" class="span2">First Name</label>
-  <input type="text" name="first_name" id="new_first_name" class="span3" value=<%= @user.get('first_name') %> >
+  <div class="controls">
+      <input type="text" name="first_name" id="new_first_name" class="span3" value=<%= @user.get('first_name') %> >
+  </div>    
 </div>
 
 
-<div class="row-fluid">
+<div class="control-group">
   <label for="last_name" class="span2">Last Name</label>
-  <input type="text" name="last_name" id="new_lastName" class="span3" value=<%= @user.get('last_name') %> >
+  <div class="controls">
+    <input type="text" name="last_name" id="new_lastName" class="span3" value=<%= @user.get('last_name') %> >
+  </div>
 </div>
 
-<div class="row-fluid">
+<div class="control-group">
   <label for="email" class="span2">Email</label>
-  <input type="text" name="email" id="new_email" class="span3" value=<%= @user.get('email') %> >
+  <div class="controls">
+    <input type="text" name="email" id="new_email" class="span3" value=<%= @user.get('email') %> >
+  </div>  
 </div>
 
-<div class="row-fluid">
+<div class="control-group">
   <label for="region" class="span2">Region</label>
-  <select id="region" class="span3">
-    <option selected value="South">South</option>
-    <option value="North">North</option>
-    <option value="West">West</option>
-    <option value="East">East</option>
-  </select>
+  <div class="controls">
+    <select id="region" class="span3">
+      <option selected value="South">South</option>
+      <option value="North">North</option>
+      <option value="West">West</option>
+      <option value="East">East</option>
+    </select>
+  </div>  
 </div>
 
+</fieldset>
 
 <div class="panel">
     <h4>
