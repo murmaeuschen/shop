@@ -1,0 +1,90 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Order number:</b>
+  <%= @order.order_number %>
+</p>
+
+<p>
+  <b>Total price:</b>
+  <%= @order.total_price %>
+</p>
+
+<p>
+  <b>Total num of items:</b>
+  <%= @order.total_num_of_items %>
+</p>
+
+<p>
+  <b>Max discount:</b>
+  <%= @order.max_discount %>
+</p>
+
+<p>
+  <b>Delivery date:</b>
+  <%= @order.delivery_date %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @order.status %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @order.user %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @order.role %>
+</p>
+
+<p>
+  <b>Date of ordering:</b>
+  <%= @order.date_of_ordering %>
+</p>
+
+<p>
+  <b>Pref delivery date:</b>
+  <%= @order.pref_delivery_date %>
+</p>
+
+<p>
+  <b>Credit card type:</b>
+  <%= @order.credit_card_type %>
+</p>
+
+<p>
+  <b>Credit card number:</b>
+  <%= @order.credit_card_number %>
+</p>
+
+<p>
+  <b>Cvv2:</b>
+  <%= @order.cvv2 %>
+</p>
+
+<p>
+  <b>Expiry date:</b>
+  <%= @order.expiry_date %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%= @order.start_date %>
+</p>
+
+<p>
+  <b>Issue number:</b>
+  <%= @order.issue_number %>
+</p>
+
+<p>
+  <b>Itemstable:</b>
+  <%= @order.itemstable %>
+</p>
+
+
+<%= link_to 'Edit', edit_order_path(@order) %> |
+<%= link_to 'Back', orders_path %>

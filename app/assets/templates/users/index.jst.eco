@@ -5,19 +5,19 @@
         </h4>
     </header>
     <section class="row-fluid">
-        <a href="#" id="user_create_button">Create New User</a>
+        <a id="user_create_button" >Create New User</a>
     </section>
     <div>
-        Number of Found Users: <%= @users.length %>
+        Number of Found Users: <%= @pageInfo.totalCount %>
     </div>
     
     <div class="panel">
         <h4>
             Search by
         </h4><label>Field Filter</label><br>
-        <form action="/users/filter" class="filters form-inline">
-            <select name="field">
-                <option value="login_name">
+        <form action="/" class="filters form-inline">
+            <select id="filterField" name="fields">
+            <option value="login_name">
                     User Name
                 </option>
                 <option value="all_columns">
@@ -26,15 +26,15 @@
                 <option value="first_name">
                     First Name
                 </option>
-                <option value="lastName">
+                <option value="last_name">
                     Last Name
                 </option>
                 <option value="role">
                     Role
                 </option>
             </select> 
-            <select name="method">
-                <option value="start_with">
+            <select id="filterWith" name="scope">
+            <option value="start_with">
                     starts with
                 </option>
                 <option value="equals">
@@ -50,7 +50,7 @@
                     does not contain
                 </option>
             </select> 
-            <input type="text"> <input type="submit" id="search" class= "btn btn-primary" value="Search">
+            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary"value="Search">
         </form>
     </div>
     <div class="paging">
@@ -59,22 +59,22 @@
     <table id="users" class="table table-condensed">
         <tbody>
             <tr>
-                <th>
-                   User name
+                <th id="forSort" class="forSort">
+                    User name
                 </th>
-                <th>
+                <th id="forSort" class="forSort">
                     First name
                 </th>
-                <th>
+                <th id="forSort" class="forSort">
                     Last name
                 </th>
-                <th>
+                <th id="forSort" class="forSort">
                     Role
                 </th>
-                <th>
+                <th id="forSort" class="forSort">
                     Email
                 </th>
-                <th>
+                <th id="forSort" class="forSort">
                     Region
                 </th>
                 <th>

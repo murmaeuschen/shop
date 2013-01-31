@@ -26,6 +26,8 @@ gem 'quiet_assets'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'kaminari'
+gem 'devise'
+gem 'has_scope'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -44,5 +46,6 @@ gem 'kaminari'
 group :development do
   gem 'debugger'
   gem 'better_errors'
+  gem 'binding_of_caller'
   gem 'thin'
 end

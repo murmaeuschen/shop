@@ -1,0 +1,85 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :order_number %><br />
+    <%= f.text_field :order_number %>
+  </div>
+  <div class="field">
+    <%= f.label :total_price %><br />
+    <%= f.text_field :total_price %>
+  </div>
+  <div class="field">
+    <%= f.label :total_num_of_items %><br />
+    <%= f.number_field :total_num_of_items %>
+  </div>
+  <div class="field">
+    <%= f.label :max_discount %><br />
+    <%= f.text_field :max_discount %>
+  </div>
+  <div class="field">
+    <%= f.label :delivery_date %><br />
+    <%= f.date_select :delivery_date %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :role %><br />
+    <%= f.text_field :role %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_ordering %><br />
+    <%= f.date_select :date_of_ordering %>
+  </div>
+  <div class="field">
+    <%= f.label :pref_delivery_date %><br />
+    <%= f.date_select :pref_delivery_date %>
+  </div>
+  <div class="field">
+    <%= f.label :credit_card_type %><br />
+    <%= f.text_field :credit_card_type %>
+  </div>
+  <div class="field">
+    <%= f.label :credit_card_number %><br />
+    <%= f.text_field :credit_card_number %>
+  </div>
+  <div class="field">
+    <%= f.label :cvv2 %><br />
+    <%= f.text_field :cvv2 %>
+  </div>
+  <div class="field">
+    <%= f.label :expiry_date %><br />
+    <%= f.date_select :expiry_date %>
+  </div>
+  <div class="field">
+    <%= f.label :start_date %><br />
+    <%= f.date_select :start_date %>
+  </div>
+  <div class="field">
+    <%= f.label :issue_number %><br />
+    <%= f.text_field :issue_number %>
+  </div>
+  <div class="field">
+    <%= f.label :itemstable %><br />
+    <%= f.text_field :itemstable %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

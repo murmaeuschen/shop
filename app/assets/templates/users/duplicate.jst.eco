@@ -16,7 +16,7 @@
 
 <div class="row-fluid">
 <label for="confirm_password" class="span2">Confirm Password</label>
-<input type="password" class="span3" name="confirmation_password" id="new_confirmPassword"/><br/>
+<input type="password" class="span3" name="password_confirmation" id="new_confirmPassword"/><br/>
 </div>
 
 <div class="paging-buttons">

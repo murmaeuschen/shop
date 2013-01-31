@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th>Item</th>
     <th>Quantity</th>
     <th>Price per line</th>
     <th></th>
@@ -11,6 +12,7 @@
 
 <% @itemstables.each do |itemstable| %>
   <tr>
+    <td><%= itemstable.item %></td>
     <td><%= itemstable.quantity %></td>
     <td><%= itemstable.price_per_line %></td>
     <td><%= link_to 'Show', itemstable %></td>
