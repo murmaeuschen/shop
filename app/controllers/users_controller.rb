@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       total_count:  User.count,
     }
 
+    
     respond_to do |format|
       format.html
       format.json do

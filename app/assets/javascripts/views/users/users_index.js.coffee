@@ -1,7 +1,7 @@
 class Shop.Views.UsersIndex extends Backbone.View
 
   template: JST['users/index']
-
+  
   events:
     'click #user_create_button': 'createUser'
     'click #backward'          : 'previous'
@@ -12,14 +12,15 @@ class Shop.Views.UsersIndex extends Backbone.View
     'click #forSort'           : 'sortUsersAsc'
     'dblclick #forSort'        : 'sortUsersDesc'
     'click #search'            : 'setFilter'
+    'click .forSort'           : 'multiSort'
 
   initialize: ->
     @collection.on('reset', @render, @)
     @collection.on('add', @render, @)
     @collection.on('destroy', @render, @)
     @collection.on('change', @render, @)
-    @trigger('click #search', @collection.filterTable('login_name', 'start_with', ''))
-            
+    @trigger 'click #search', @collection.filterTable 'login_name', 'start_with', ''
+
   render: ->
     $(@el).html(@template(users: @collection, pageInfo: @collection.pageInfo() ))
     @collection.each(@appendUser)
@@ -54,8 +55,10 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.howManyPer(per)
     @render
 
-  sortUsersAsc: (e) ->
+  sortUsersAsc: (e) -># NEED refactor
     e.preventDefault()
+    return if e.ctrlKey
+    @collection.sortStore = ""
     str = $(e.target).text()
     colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
     if colName is "user_name"
@@ -63,8 +66,10 @@ class Shop.Views.UsersIndex extends Backbone.View
     @collection.sortTableAsc(colName)
     @render
 
-  sortUsersDesc: (e) ->
+  sortUsersDesc: (e) -># NEED refactor
     e.preventDefault()
+    return if e.ctrlKey
+    @collection.sortStore = ""
     str = $(e.target).text()
     colName = String(str.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
     if colName is "user_name"
@@ -78,4 +83,15 @@ class Shop.Views.UsersIndex extends Backbone.View
     newStartWith = $(@el).find('#filterWith :selected').val()
     newRequest = $(@el).find('#filterText').val()
     @collection.filterTable(newField, newStartWith, newRequest)
+    @render
+
+  multiSort: (e) =># NEED refactor
+    e.preventDefault()
+    return if not e.ctrlKey
+    if e.ctrlKey 
+      multiStr = $(e.target).text()
+      col = String(multiStr.match /[a-zA-Z]+\s*\w*[^\s]/i).replace(/\s/, '_').toLowerCase()
+      if col is "user_name"
+        col = "login_name"
+    @collection.sortTableMulti(col)
     @render

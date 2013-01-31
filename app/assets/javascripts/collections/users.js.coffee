@@ -2,7 +2,8 @@ class Shop.Collections.Users extends Backbone.Collection
 
   baseUrl: '/api/users'
   model: Shop.Models.User
-
+  sortStore: ""
+  
   initialize: (options) =>
     @init_pagination(options)
 
@@ -19,7 +20,7 @@ class Shop.Collections.Users extends Backbone.Collection
       fields: @fields
       start_with: @start_with
       request: @request
-  
+        
   parse: (resp) =>
     @init_pagination(resp)
     resp["models"]
@@ -30,19 +31,30 @@ class Shop.Collections.Users extends Backbone.Collection
     @numPages = options['num_pages']
     @totalCount = options['total_count']
     @orderBy = "id asc"
-
+   
   howManyPer: (newPerPage) =>
     @currentPage = 1
     @perPage = newPerPage
     @fetch()
 
-  sortTableAsc: (ident) =>
+  sortTableAsc: (ident) =># NEED refactor
     @orderBy = "#{ident} asc"
     @fetch()
 
-  sortTableDesc: (ident) =>
+  sortTableDesc: (ident) =># NEED refactor
     @orderBy = "#{ident} desc"
     @fetch()
+
+  sortTableMulti: (ident) =># NEED refactor
+    @orderBy = "#{ident} asc"
+    if @sortStore is ""
+      @sortStore = @orderBy
+    else
+      @sortStore += ", " + @orderBy
+    @orderBy = @sortStore
+    console.log @orderBy
+    @fetch()
+
     
   filterTable: (newField, newStartWith, newRequest) =>
     @fields = newField

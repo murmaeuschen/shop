@@ -5,7 +5,7 @@
         </h4>
     </header>
     <section class="row-fluid">
-        <button id="user_create_button" class= "btn btn-primary">Create New User</button>
+        <a id="user_create_button" >Create New User</a>
     </section>
     <div>
         Number of Found Users: <%= @pageInfo.totalCount %>
@@ -50,7 +50,7 @@
                     does not contain
                 </option>
             </select> 
-            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary">
+            <input type="text" id="filterText" name="request"> <input type="submit" id="search" class= "btn btn-primary"value="Search">
         </form>
     </div>
     <div class="paging">
@@ -59,22 +59,22 @@
     <table id="users" class="table table-condensed">
         <tbody>
             <tr>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     User name
                 </th>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     First name
                 </th>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     Last name
                 </th>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     Role
                 </th>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     Email
                 </th>
-                <th id="forSort">
+                <th id="forSort" class="forSort">
                     Region
                 </th>
                 <th>
