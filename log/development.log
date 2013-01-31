@@ -438,3 +438,399 @@ Processing by UsersController#index as JSON
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
   [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE (login_name LIKE '%') ORDER BY id asc LIMIT 25 OFFSET 0
 Completed 200 OK in 138ms (Views: 103.1ms | ActiveRecord: 0.7ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:25:25 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (28.7ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (11.2ms)
+Compiled shop.js  (2138ms)  (pid 611)
+Compiled orders/index.js  (132ms)  (pid 611)
+Compiled models/order.js  (30ms)  (pid 611)
+Compiled collections/orders.js  (38ms)  (pid 611)
+Compiled views/orders/orders_index.js  (12ms)  (pid 611)
+Compiled routers/orders_router.js  (39ms)  (pid 611)
+Compiled application.js  (1599ms)  (pid 611)
+Completed 200 OK in 5068ms (Views: 4970.1ms | ActiveRecord: 28.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:32:47 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (1.0ms)
+Compiled collections/orders.js  (17ms)  (pid 611)
+Compiled application.js  (203ms)  (pid 611)
+Completed 200 OK in 408ms (Views: 401.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:36:04 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (7.4ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.6ms)
+Compiled orders/index.js  (116ms)  (pid 611)
+Compiled views/orders/orders_index.js  (48ms)  (pid 611)
+Compiled application.js  (60ms)  (pid 611)
+Completed 200 OK in 682ms (Views: 667.7ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:36:09 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 85ms (Views: 81.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders/index" for 127.0.0.1 at 2013-01-31 14:36:22 +0200
+
+ActionController::RoutingError (No route matches [GET] "/orders/index"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.4) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.4) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/olga/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/orders/index" for 127.0.0.1 at 2013-01-31 14:37:07 +0200
+
+ActionController::RoutingError (No route matches [GET] "/orders/index"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.4) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.4) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/olga/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.4ms)
+
+
+Started GET "/orders/index" for 127.0.0.1 at 2013-01-31 14:39:33 +0200
+
+ActionController::RoutingError (No route matches [GET] "/orders/index"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.4) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.4) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/olga/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.6ms)
+
+
+Started GET "/orders/index" for 127.0.0.1 at 2013-01-31 14:39:36 +0200
+
+ActionController::RoutingError (No route matches [GET] "/orders/index"):
+  actionpack (3.2.11) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.11) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.11) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.11) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.11) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.4) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.4) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.11) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.4) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.11) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.11) lib/rails/engine.rb:479:in `call'
+  railties (3.2.11) lib/rails/application.rb:223:in `call'
+  rack (1.4.4) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.11) lib/rails/rack/log_tailer.rb:17:in `call'
+  thin (1.5.0) lib/thin/connection.rb:81:in `block in pre_process'
+  thin (1.5.0) lib/thin/connection.rb:79:in `catch'
+  thin (1.5.0) lib/thin/connection.rb:79:in `pre_process'
+  thin (1.5.0) lib/thin/connection.rb:54:in `process'
+  thin (1.5.0) lib/thin/connection.rb:39:in `receive_data'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run_machine'
+  eventmachine (1.0.0) lib/eventmachine.rb:187:in `run'
+  thin (1.5.0) lib/thin/backends/base.rb:63:in `start'
+  thin (1.5.0) lib/thin/server.rb:159:in `start'
+  rack (1.4.4) lib/rack/handler/thin.rb:13:in `run'
+  rack (1.4.4) lib/rack/server.rb:268:in `start'
+  railties (3.2.11) lib/rails/commands/server.rb:70:in `start'
+  railties (3.2.11) lib/rails/commands.rb:55:in `block in <top (required)>'
+  railties (3.2.11) lib/rails/commands.rb:50:in `tap'
+  railties (3.2.11) lib/rails/commands.rb:50:in `<top (required)>'
+  script/rails:6:in `require'
+  script/rails:6:in `<main>'
+
+
+  Rendered /home/olga/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.11/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:39:39 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.0ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.7ms)
+Compiled views/orders/orders_index.js  (117ms)  (pid 611)
+Compiled application.js  (76ms)  (pid 611)
+Completed 200 OK in 816ms (Views: 803.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:39:41 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 39.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-31 14:45:20 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.8ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 25 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 397ms (Views: 367.1ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/api/users?orderBy=id+asc&currentPage=1&perPage=25&fields=login_name&scope=start_with&request=" for 127.0.0.1 at 2013-01-31 14:45:22 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"orderBy"=>"id asc", "currentPage"=>"1", "perPage"=>"25", "fields"=>"login_name", "scope"=>"start_with", "request"=>""}
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM "users" WHERE (login_name LIKE '%')
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (8.7ms)[0m  SELECT "users".* FROM "users" WHERE (login_name LIKE '%') ORDER BY id asc LIMIT 25 OFFSET 0
+Completed 200 OK in 103ms (Views: 76.1ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:46:16 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (8.6ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 188ms (Views: 149.2ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:52:39 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (28.0ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 166ms (Views: 129.0ms | ActiveRecord: 28.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:54:21 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (10.8ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (8.2ms)
+Compiled views/orders/orders_index.js  (315ms)  (pid 611)
+Compiled application.js  (52ms)  (pid 611)
+Completed 200 OK in 2009ms (Views: 1956.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:54:28 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (13.9ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 75ms (Views: 57.1ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:55:58 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.7ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 116ms (Views: 108.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-31 14:56:03 +0200
+Processing by UsersController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" LIMIT 25 OFFSET 0
+  Rendered users/index.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 172ms (Views: 153.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-01-31 14:56:08 +0200
+Processing by UsersController#index as HTML
+  [1m[36m (3.6ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT COUNT(*) FROM "users" 
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 25 OFFSET 0[0m
+  Rendered users/index.html.erb within layouts/application (76.4ms)
+Completed 200 OK in 147ms (Views: 136.0ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/api/users?orderBy=id+asc&currentPage=1&perPage=25&fields=login_name&scope=start_with&request=" for 127.0.0.1 at 2013-01-31 14:56:10 +0200
+Processing by UsersController#index as JSON
+  Parameters: {"orderBy"=>"id asc", "currentPage"=>"1", "perPage"=>"25", "fields"=>"login_name", "scope"=>"start_with", "request"=>""}
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM "users" WHERE (login_name LIKE '%')
+  [1m[36m (9.4ms)[0m  [1mSELECT COUNT(*) FROM "users" [0m
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users" WHERE (login_name LIKE '%') ORDER BY id asc LIMIT 25 OFFSET 0
+Completed 200 OK in 209ms (Views: 87.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 14:56:16 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 144ms (Views: 119.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders.json" for 127.0.0.1 at 2013-01-31 14:57:31 +0200
+Processing by OrdersController#index as JSON
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" 
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:00:25 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.9ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.8ms)
+Compiled views/orders/orders_index.js  (351ms)  (pid 611)
+Compiled application.js  (56ms)  (pid 611)
+Completed 200 OK in 1107ms (Views: 1065.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:01:48 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.4ms)
+Compiled views/orders/orders_index.js  (193ms)  (pid 611)
+Compiled application.js  (69ms)  (pid 611)
+Completed 200 OK in 647ms (Views: 644.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:04:08 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.8ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.6ms)
+Compiled routers/orders_router.js  (183ms)  (pid 611)
+Compiled application.js  (51ms)  (pid 611)
+Completed 200 OK in 615ms (Views: 604.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:04:12 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 73ms (Views: 68.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:04:14 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (1.8ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 68ms (Views: 58.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:04:24 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.4ms)[0m  SELECT "orders".* FROM "orders" 
+  Rendered orders/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 97ms (Views: 92.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:04:34 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.5ms)[0m  [1mSELECT "orders".* FROM "orders" [0m
+  Rendered orders/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 79ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:09:14 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.2ms)[0m  SELECT "orders".* FROM "orders" LIMIT 25 OFFSET 0
+  Rendered orders/index.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 107ms (Views: 78.7ms | ActiveRecord: 23.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:09:19 +0200
+Processing by OrdersController#index as HTML
+  [1m[36mOrder Load (0.3ms)[0m  [1mSELECT "orders".* FROM "orders" LIMIT 25 OFFSET 0[0m
+  Rendered orders/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 99ms (Views: 97.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2013-01-31 15:09:30 +0200
+Processing by OrdersController#index as HTML
+  [1m[35mOrder Load (0.3ms)[0m  SELECT "orders".* FROM "orders" LIMIT 25 OFFSET 0
+  Rendered orders/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 138ms (Views: 136.4ms | ActiveRecord: 0.3ms)
